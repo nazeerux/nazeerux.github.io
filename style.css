@@ -13,7 +13,7 @@ p {
     font-weight: 300;
     color: hsl(0, 0%, 70%);
     line-height: 1.5;
-    
+
 }
 
 body {
@@ -47,7 +47,7 @@ body {
 nav {
     position: fixed;
     top: 30px;
-    
+
     width: 500px;
     display: flex;
     height: auto;
@@ -186,6 +186,7 @@ ul li {
 
 }
 
+
 .cardsskills {
     background-color: #000000ba;
     height: 100%;
@@ -234,7 +235,10 @@ ul li {
 }
 
 .skillsicons {
-    margin-bottom: 20px;
+
+    max-width: 814px;
+    display: flex;
+    align-items: center;
 }
 
 .education h2 {
@@ -244,24 +248,28 @@ ul li {
     letter-spacing: -2px;
     font-family: 'Times New Roman', Times, serif;
 }
+
 .education ul {
     margin-top: 20px;
     list-style-type: disc;
-     margin: 0;
-    
+    margin: 0;
+
 }
+
 .education ul li {
     font-family: "inter", sans-serif;
     font-size: 18px;
     line-height: 1.6;
     padding: 0;
-   
+
 }
+
 #works {
     background-color: #211231;
-    
-    
+
+
 }
+
 .wrks h2 {
     font-size: 40px;
     padding-bottom: 40px;
