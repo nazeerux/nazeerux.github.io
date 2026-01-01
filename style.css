@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0px;
+    font-family: "inter", sans-serif;
+    font-weight: 300;
+    color: hsl(0, 0%, 70%);
+    line-height: 1.5;
+    
+}
+
+body {
+    font-family: 'inter', sans-serif;
+}
+
+.bgimg {
+    background-image: url(images/gradient-wallpapers-5Q9Gf0WSyLk-unsplash.jpg);
+    /* background-color: red; */
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+    background-size: cover;
+}
+
+.bgimg h2 {
+    color: rgba(255, 255, 255, 0.692);
+    font-size: 120px;
+    letter-spacing: 25px;
+    font-family: "Lexend Giga", sans-serif;
+}
+
+.bgimg img {
+    position: absolute;
+    bottom: 0;
+    width: 35%;
+}
+
+nav {
+    position: fixed;
+    top: 30px;
+    
+    width: 500px;
+    display: flex;
+    height: auto;
+    z-index: 100;
+
+}
+
+ul a {
+    text-decoration: none;
+
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.034);
+    border-radius: 25px;
+    backdrop-filter: blur(8px);
+    border-top: .5px solid rgba(255, 255, 255, 0.4);
+    border-left: .5px solid rgba(255, 255, 255, 0.4);
+    border-right: .5px solid rgba(255, 255, 255, 0.4);
+    border-bottom: .5px solid rgba(255, 255, 255, 0.4);
+
+
+}
+
+ul li {
+    padding: 10px 40px;
+    font-family: "Lexend Giga", sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+#about {
+    background-color: #7749A6;
+    padding: 70px;
+}
+
+.cardaboutme {
+    color: white;
+    font-family: "inter", sans-serif;
+    background-color: #000000ba;
+    padding: 40px;
+    border-radius: 25px;
+}
+
+.cardaboutme h3 {
+    letter-spacing: 0px;
+    word-spacing: 2px;
+    font-size: 32px;
+    font-weight: 350;
+}
+
+/* .cardaboutme p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 0px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+} */
+
+.dwnldcv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btndwnld {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    justify-content: center;
+    padding: 15px;
+    border: white 2px solid;
+    border-radius: 25px;
+}
+
+.btndwnld img {
+    width: 30px;
+    height: 25px;
+    text-align: center;
+}
+
+.iconcircle img {
+    width: 25px;
+    height: 25px;
+}
+
+.btndwnld p {
+    font-family: "inter", sans-serif;
+    font-size: 18px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+}
+
+.icncv {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.iconcircle {
+    display: grid;
+    place-items: center;
+    height: 45px;
+    width: 45px;
+    background-color: #000000ba;
+    border-radius: 50%;
+    justify-content: center;
+    border: 2px solid white;
+    object-fit: cover;
+}
+
+.iconcircle i {
+    color: white;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.aboutsection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.cardsskills {
+    background-color: #000000ba;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    padding: 20px;
+    color: white;
+    font-family: "inter", sans-serif;
+    font-size: 20px;
+    letter-spacing: 0px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cardsskills img {
+    width: 80px;
+    height: 80px;
+}
+
+.carddetails span {
+    font-family: poppins, sans-serif;
+    letter-spacing: -1px;
+
+}
+
+.skillssection {
+    display: flex;
+    justify-content: center;
+
+}
+
+#projects {
+    background-color: #211231;
+    color: white;
+}
+
+.skillshead h2 {
+
+    font-size: 40px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    letter-spacing: -2px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.skillsicons {
+    margin-bottom: 20px;
+}
+
+.education h2 {
+    font-size: 40px;
+    padding-bottom: 20px;
+    padding-top: 40px;
+    letter-spacing: -2px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.education ul {
+    margin-top: 20px;
+    list-style-type: disc;
+     margin: 0;
+    
+}
+.education ul li {
+    font-family: "inter", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 0;
+   
+}
+#works {
+    background-color: #211231;
+    
+    
+}
+.wrks h2 {
+    font-size: 40px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    letter-spacing: -2px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
