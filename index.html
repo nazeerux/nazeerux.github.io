@@ -20,10 +20,11 @@
 
 <body>
     <section id="home">
+        <div class="cursor"></div>
         <div class="bgimg">
             <nav>
                 <ul>
-                    <a href="">
+                    <a href="#projects">
                         <li>Projects</li>
                     </a>
                     <a href="">
@@ -161,18 +162,17 @@
                 <h2>Skills
                 </h2>
                 <div class="row g-2 skillsicons">
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <img src="images/html.svg" alt="">
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <img src="/images/css3.svg" alt="">
                     </div>
-                    <div class="col-md-3"><img src="images/Figma.svg" alt=""></div>
-                    <div class="col-md-3"><img src="images/js.svg" alt=""></div>
-                    <div class="col-md-3"><img src="images/ps.svg" alt=""></div>
-                    <div class="col-md-3"><img src="images/affinity.svg" alt=""></div>
-                    <div class="col-md-3"></div>
-                    <div class="col-md-3"></div>
+                    <div class="col-md-2"><img src="images/Figma.svg" alt=""></div>
+                    <div class="col-md-2"><img src="images/ps.svg" alt=""></div>
+                    <div class="col-md-2"><img src="images/affinity.svg" alt=""></div>
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2"></div>
                 </div>
                 <p>I specialize in creating responsive, user-friendly websites using a proven
                     technology stack. I build the structural foundation with semantic HTML and craft visual layouts
@@ -181,31 +181,45 @@
                     different browser</p>
             </div>
             <div class="education">
-                
-                    <h2>Education
-                    </h2>
-                    <ul>
-                        <li>Advanced Diploma in Ui/Ux Designing ,Skilz hub kotakkal </li>
-                        <li>BA English Language and literature ,Calicut university</li>
-                    </ul>
+
+                <h2>Education
+                </h2>
+                <ul>
+                    <li>Advanced Diploma in Ui/Ux Designing ,Skilz hub kotakkal </li>
+                    <li>BA English Language and literature ,Calicut university</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <section id="works">
-           <div class="container">
+        <div class="container">
             <div class="wrks">
                 <h2>Works
-                    </h2>
+                </h2>
             </div>
-           </div>
-           <div class="row">
+        </div>
+        <div class="row">
             <div class="col-md-6"></div>
             <div class="col-md-6"></div>
             <div class="col-md-6"></div>
             <div class="col-md-6"></div>
-           </div>
+        </div>
     </section>
+    <script>
+        const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
+        });
+
+        document.addEventListener('click', e => {
+            cursor.classList.add("expand");
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500);
+        });
+    </script>
 
 </body>
 
