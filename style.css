@@ -70,7 +70,7 @@ body {
 }
 
 .bgimg {
-    background-image: url(images/gradient-wallpapers-5Q9Gf0WSyLk-unsplash.jpg);
+    background-image: url(images/gradient-wallpapers-5Q9Gf0WSyLk-unsplash.jpg );
     /* background-color: red; */
     width: 100vw;
     height: 100vh;
@@ -200,10 +200,24 @@ ul li:hover {
     height: 25px;
     text-align: center;
 }
-
+.btndwnld:hover {
+    background-color: rgba(68, 2, 155, 0.226);
+    transition: .5s;
+    border-radius: 25px;
+    color: white;
+}
 .iconcircle img {
     width: 25px;
     height: 25px;
+    transition: .7s;
+}
+.icncv :hover{
+    background-color: rgb(68, 2, 155);
+    border-radius: 50%;
+}
+.iconcircle a:hover{
+   transform: rotate(360deg);
+   transition: .5s;
 }
 
 .btndwnld p {
@@ -434,4 +448,5 @@ footer h4{
     font-size: 16px;
     text-align: center;
     font-family: "inter", sans-serif;
+    margin: 0;
 }
