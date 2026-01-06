@@ -82,6 +82,7 @@ body {
 
 .bgimg h2 {
     color: rgba(255, 255, 255, 0.692);
+    /* font-size: clamp(16px, 2.5vw, 32px); */
     font-size: 120px;
     letter-spacing: 25px;
     font-family: "Lexend Giga", sans-serif;

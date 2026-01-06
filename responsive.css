@@ -1,0 +1,60 @@
+@media screen and(max-width:1080px) {
+    .cursor{
+        display: none;
+    }
+    .bgimg h2 {
+        font-size: 71px;
+    }
+    
+    .bgimg img {
+        width: 650px;
+    }
+    .skillsicons {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+   
+}
+@media screen and(max-width:900px) {
+    #home {
+        overflow: hidden;
+    }
+
+    .cursor {
+        display: none;
+
+    }
+
+    .bgimg h2 {
+        font-size: 71px;
+        text-align: center;
+        letter-spacing:15px;
+    }
+
+    nav {
+        position: relative;
+        top: 10px;
+    }
+
+    .bgimg {
+        height: 70vh;
+        width: 100vw;
+    }
+
+    .bgimg img {
+        width: 660px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .cursor {
+        display: none;
+
+    }
+
+    .bgimg h2 {
+        font-size: 74px;
+    }
+}
