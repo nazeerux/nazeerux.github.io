@@ -78,7 +78,9 @@ body {
     place-items: center;
     position: relative;
     background-size: cover;
+    z-index: 10;
 }
+
 
 .bgimg h2 {
     color: rgba(255, 255, 255, 0.692);
@@ -145,7 +147,7 @@ ul li:hover {
 #about {
     background-color: #7749A6;
     padding: 70px;
-    z-index: 99;
+    z-index: 10;
 }
 
 .cardaboutme {
@@ -164,6 +166,9 @@ ul li:hover {
 }
 #home{
     z-index: 999;
+}
+.cardaboutme p{
+    max-width: 800px;
 }
 /* .cardaboutme p {
     margin-top: 20px;
@@ -472,7 +477,7 @@ footer h4{
     display: grid;
     place-items: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 100;
+    z-index: 0;
 }
 .floatingicon img{
     width: 35px;
