@@ -1,21 +1,24 @@
 @media screen and(max-width:1080px) {
-    .cursor{
+    .cursor {
         display: none;
     }
+
     .bgimg h2 {
         font-size: 71px;
     }
-    
+
     .bgimg img {
         width: 650px;
     }
+
     .skillsicons {
         display: flex;
         flex-wrap: wrap;
-        
+
     }
-   
+
 }
+
 @media screen and(max-width:900px) {
     #home {
         overflow: hidden;
@@ -29,7 +32,7 @@
     .bgimg h2 {
         font-size: 71px;
         text-align: center;
-        letter-spacing:15px;
+        letter-spacing: 15px;
     }
 
     nav {
@@ -54,7 +57,42 @@
 
     }
 
-    .bgimg h2 {
-        font-size: 74px;
+    .bgimg {
+        height: 60vh;
+        width: 100vw;
     }
+
+    .bgimg :nth-child(2) {
+        font-size: 68px;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .skillsicons{
+        
+    }
+}
+@media screen and (max-width:480px) {
+   nav{
+    display: none;
+   }
+    .cursor {
+        display: none;
+
+    }
+
+    .bgimg {
+        height: 50vh;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+ .bgimg :nth-child(2) {
+        font-size: 21px;
+        display: flex;
+        justify-content: center;
+        margin: 0;}
+    
+
+   
 }
