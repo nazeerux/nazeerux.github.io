@@ -7,9 +7,7 @@
         font-size: 71px;
     }
 
-    .bgimg img {
-        width: 650px;
-    }
+
 
     .skillsicons {
         display: flex;
@@ -40,14 +38,8 @@
         top: 10px;
     }
 
-    .bgimg {
-        height: 70vh;
-        width: 100vw;
-    }
 
-    .bgimg img {
-        width: 660px;
-    }
+
 
 }
 
@@ -57,10 +49,7 @@
 
     }
 
-    .bgimg {
-        height: 60vh;
-        width: 100vw;
-    }
+
 
     .bgimg:nth-child(2) {
         font-size: 68px;
@@ -79,14 +68,14 @@
     }
 
     .bgimg {
-        height: 50vh;
+        height: 100dvh;
         width: 100%;
         object-fit: cover;
         object-position: center;
     }
 
     .bgimg h2 {
-        font-size: 32px;
+        font-size: 44px;
         letter-spacing: 5px;
     }
 
@@ -99,45 +88,114 @@
     }
 
     footer h3 {
-        max-width: 294px;
-        font-size: 6px;
-    }
-}
-
-
-
-@media screen and (max-width:425px) {
-
-
-    .cursor {
-        display: none;
-
+        max-width: 414px;
+        font-size: 19px;
+        letter-spacing: 0px;
     }
 
-    .bgimg {
-        height: 50vh;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
+    footer h4 {
+        padding-top: 4px;
     }
 
-    .bgimg h2 {
-        font-size: 32px;
-        letter-spacing: 5px;
+    .floatingicon1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        right: 12px;
     }
 
-    nav {
-        display: none;
+    .floatingicon1 img {
+        display: block;
+
     }
 
-    footer h2 {
-        font-size: 24px;
+    .floatingicon {
+        right: 12px;
     }
 
-    footer h3 {
-        max-width: 294px;
-        font-size: 6px;
+    .cardaboutme {
+        max-width: 270px;
+        padding: 20px;
     }
 
+    .btndwnld {
+        gap: 0px;
+        width: 170px;
+        height: 40px;
+
+    }
+
+    .btndwnld p {
+        font-size: 16px;
+    }
+
+    .icncv {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+
+    @media screen and (max-width:425px) {
+
+
+        .cursor {
+            display: none;
+
+        }
+
+        .bgimg {
+            height: 100dvh;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .bgimg h2 {
+            font-size: 44px;
+            letter-spacing: 5px;
+        }
+
+        nav {
+            display: none;
+        }
+
+        footer h2 {
+            font-size: 24px;
+        }
+
+        footer h3 {
+            max-width: 414px;
+            font-size: 19px;
+            ;
+            letter-spacing: 0px;
+        }
+
+        .cardaboutme {
+            max-width: 270px;
+            padding: 20px;
+        }
+    }
+
+    .icncv {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .btndwnld p {
+        font-size: 16px;
+    }
+
+    .floatingicon {
+        right: 12px;
+    }
+
+    .floatingicon1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        right: 12px;
+    }
 
 }
