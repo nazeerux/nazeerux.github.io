@@ -67,13 +67,13 @@ p {
 
 body {
     font-family: 'inter', sans-serif;
+    overflow-x: hidden;
 }
 
 .bgimg {
-    background-image: url(images/gradient-wallpapers-5Q9Gf0WSyLk-unsplash.jpg );
-    /* background-color: red; */
-    width: 100vw;
-    height: 100vh;
+ 
+    width: 100%;
+    min-height:100dvh;
     display: grid;
     place-items: center;
     position: relative;
@@ -84,16 +84,25 @@ body {
 
 .bgimg h2 {
     color: rgba(255, 255, 255, 0.692);
+    z-index: 11;
     /* font-size: clamp(16px, 2.5vw, 32px); */
     font-size: 120px;
     letter-spacing: 25px;
     font-family: "Lexend Giga", sans-serif;
+  
+
 }
 
-.bgimg img {
+.bgimg video {
     position: absolute;
-    bottom: 0;
-    width: 35%;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    left: 0;
+    top: 0;
+   
 }
 
 nav {
@@ -143,10 +152,26 @@ nav ul li:hover {
     color: #fff;
     border-radius: 25px;
     transition: 0.3s;
+  
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        scale:.5;
+    }
+
+    to {
+        opacity: 1;
+        scale:1;
+    }
+}
+    .block {
+        animation: appear 5s linear;
+    }
+
 #about {
-    background-color: #7749A6;
+    background-color: #8738d6;
     padding: 70px;
     z-index: 10;
 }
@@ -278,6 +303,12 @@ nav ul li:hover {
 
 }
 
+.skillsicons {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+}
 
 .cardsskills {
     background-color: #000000ba;
@@ -335,7 +366,7 @@ nav ul li:hover {
 .skillshead h2 {
 
     font-size: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     padding-top: 20px;
     letter-spacing: -2px;
     font-family: 'Times New Roman', Times, serif;
@@ -390,7 +421,7 @@ nav ul li:hover {
 .cardwrk img {
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 32px;
     object-fit: cover;
     object-position: center;
     transition: .7s;
@@ -526,16 +557,20 @@ footer h4 {
     transition: .7s;
 
 }
+
 .prjimg img:hover {
     transform: scale(1.05);
     transition: 0.4s;
 }
+
 #prjct2 {
     margin-top: 40px;
 }
-#prjct2 ul li{
-   color: rgb(49, 49, 49);
+
+#prjct2 ul li {
+    color: rgb(49, 49, 49);
 }
-#prjct2 p{
+
+#prjct2 p {
     color: rgb(49, 49, 49);
 }

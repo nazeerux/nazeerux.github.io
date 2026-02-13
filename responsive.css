@@ -62,20 +62,17 @@
         width: 100vw;
     }
 
-    .bgimg :nth-child(2) {
+    .bgimg:nth-child(2) {
         font-size: 68px;
         display: flex;
         justify-content: center;
         margin: 0;
     }
-    .skillsicons{
-        
-    }
+
 }
+
 @media screen and (max-width:480px) {
-   nav{
-    display: none;
-   }
+
     .cursor {
         display: none;
 
@@ -87,12 +84,60 @@
         object-fit: cover;
         object-position: center;
     }
- .bgimg :nth-child(2) {
-        font-size: 21px;
-        display: flex;
-        justify-content: center;
-        margin: 0;}
-    
 
-   
+    .bgimg h2 {
+        font-size: 32px;
+        letter-spacing: 5px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    footer h2 {
+        font-size: 24px;
+    }
+
+    footer h3 {
+        max-width: 294px;
+        font-size: 6px;
+    }
+}
+
+
+
+@media screen and (max-width:425px) {
+
+
+    .cursor {
+        display: none;
+
+    }
+
+    .bgimg {
+        height: 50vh;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .bgimg h2 {
+        font-size: 32px;
+        letter-spacing: 5px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    footer h2 {
+        font-size: 24px;
+    }
+
+    footer h3 {
+        max-width: 294px;
+        font-size: 6px;
+    }
+
+
 }
