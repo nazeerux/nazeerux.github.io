@@ -72,6 +72,7 @@
         width: 100%;
         object-fit: cover;
         object-position: center;
+        z-index: -1px;
     }
 
     .bgimg h2 {
@@ -154,6 +155,7 @@
         .bgimg h2 {
             font-size: 35px;
             letter-spacing: 5px;
+            z-index: 11px;
         }
 
         nav {
@@ -206,6 +208,10 @@
     }
     #about{
         padding: 10px;
+    }
+    video{
+        height: 100dvh;
+        z-index: 10px;
     }
 
 }
