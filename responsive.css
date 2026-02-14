@@ -51,12 +51,13 @@
 
 
 
-    .bgimg:nth-child(2) {
+    .bgimg h2 {
         font-size: 68px;
         display: flex;
         justify-content: center;
         margin: 0;
     }
+
 
 }
 
