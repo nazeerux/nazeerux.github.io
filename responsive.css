@@ -72,7 +72,7 @@
         width: 100%;
         object-fit: cover;
         object-position: center;
-        z-index: -1px;
+       
     }
 
     .bgimg h2 {
@@ -211,9 +211,8 @@
     }
     video{
         height: 100dvh;
-        z-index: 10px;
-        opacity: 1;
-        display: block;
+       
+      
     }
 
 }
