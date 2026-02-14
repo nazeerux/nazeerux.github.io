@@ -212,6 +212,8 @@
     video{
         height: 100dvh;
         z-index: 10px;
+        opacity: 1;
+        display: block;
     }
 
 }
