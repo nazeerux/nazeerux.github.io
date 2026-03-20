@@ -35,7 +35,6 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    background: red;
     z-index: 1000;
 }
 
@@ -715,7 +714,7 @@ nav ul {
 
 /* --- Back Button Styles --- */
 .back-btn-container {
-    padding: 120px 100px 0 100px;
+    padding: 150px 100px 0 100px;
 }
 
 .back-btn {

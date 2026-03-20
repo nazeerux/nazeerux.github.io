@@ -112,6 +112,16 @@
     #contact {
         padding: 60px 40px 30px 40px;
     }
+
+    .project-title {
+        font-size: 50px !important;
+    }
+    .project-hero-img {
+        height: 300px !important;
+    }
+    .back-btn-container {
+        padding: 130px 40px 0 40px !important;
+    }
 }
 
 /* Small Layouts (Phones, 576px and below) */
@@ -166,5 +176,17 @@
     }
     .ss a {
         font-size: 24px;
+    }
+
+    .project-title {
+        font-size: 36px !important;
+        line-height: 1.2;
+    }
+    .project-hero-img {
+        height: 250px !important;
+        margin-bottom: 30px !important;
+    }
+    .back-btn-container {
+        padding: 110px 20px 0 20px !important;
     }
 }
