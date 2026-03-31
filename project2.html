@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fintech Dashboard - Case Study</title>
+    <title>Interior Design Redesign - Case Study</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -118,41 +118,43 @@
 
     <section id="project-header">
         <div class="container" data-aos="fade-up">
-            <h1 class="project-title">Fintech Dashboard</h1>
-            <img src="/Images/dasboard.png"
-                alt="Fintech Dashboard" class="project-hero-img" loading="lazy">
+            <h1 class="project-title">Interior Design Redesign</h1>
+            <div class="image-preview-wrapper">
+                <img src="/Images/Desert Falcon interior.jpg"
+                    alt="Interior Design Redesign" class="project-hero-img" loading="lazy" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                <div class="preview-overlay" onclick="openLightbox(this.previousElementSibling.src)">
+                    <i class="fa-solid fa-expand"></i> Preview
+                </div>
+            </div>
 
             <div class="row project-section">
                 <div class="col-md-8" data-aos="fade-right">
                     <h3>The Problem</h3>
-                    <p>How might we design a simple digital solution that allows elderly individuals, people with
-                        disabilities, and those living abroad to easily access and manage ration services without
-                        needing to physically visit ration shops?:</p>
+                    <p>Desert Falcon Interior presented us with a legacy website that was fundamentally disconnected from the luxury tier of services they provided. The original interface suffered from a cluttered layout, outdated typography, and inconsistent branding that diluted their exquisite architectural work. High-end clientele found it tedious to navigate through disjointed visual portfolios, and crucial information like service offerings and consultation bookings were buried beneath an unintuitive information architecture.</p>
 
                     <h3>The Solution</h3>
-                    <p>To address this problem, Ezy Ration provides a simple and accessible mobile platform that allows
-                        users to manage ration services digitally. The app enables users to view their digital ration
-                        card, track monthly ration availability, and monitor transaction history without visiting the
-                        ration shop. It also allows family members who are abroad to check and manage ration benefits
-                        for their households remotely. By offering clear information, notifications, and an easy-to-use
-                        interface, the app helps reduce the need for physical visits and makes ration services more
-                        accessible for elderly and disabled users.</p>
+                    <p>We completely revitalized the Desert Falcon digital presence by engineering a highly premium, modern, and minimalist web platform. Guided by a "less is powerfully more" philosophy, we constructed a sophisticated design system emphasizing vast whitespace, elegant typography, and carefully paced user flows.</p>
+                    <p>Key highlights of the redesigned platform include:</p>
+                    <ul>
+                        <li><strong style="color: #023222;">Immersive Visual Portfolios:</strong> Cinematic full-screen image previews allow users to roam freely through high-definition renders, fostering a deeper connection with the design spaces.</li>
+                        <li><strong style="color: #023222;">Frictionless Navigation:</strong> A streamlined top-tier navigation logic that guides visitors effortlessly from inspiration to booking consultations.</li>
+                        <li><strong style="color: #023222;">Responsive Luxury:</strong> Absolute consistency, intuitive accessibility, and stunning performance across mobile, tablet, and ultra-wide devices.</li>
+                    </ul>
+                    <p>The ultimate result is a mesmerizing, user-friendly interface that operates seamlessly and perfectly matches the prestige of the Desert Falcon brand.</p>
                 </div>
 
                 <div class="col-md-4" data-aos="fade-left">
                     <h3>Role & Timeline</h3>
-                    <p><strong>Role:</strong> UI/UX Designer<br>
-                        <strong>Timeline:</strong> 4 Weeks<br>
-                        <strong>Client:</strong> Kerala Ration Services
+                    <p><strong>Role:</strong> Lead UI/UX Designer<br>
+                        <strong>Timeline:</strong> 3 Weeks<br>
+                        <strong>Client:</strong> Desert Falcon Interior
                     </p>
 
-                    <h3>Tech Stack</h3>
+                    <h3>Tech Stack & Tools</h3>
                     <div class="tech-stack">
                         <span>Figma</span>
-                        <!-- <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>Bootstrap</span> -->
+                        <span>Adobe Photoshop</span>
+                        <span>Illustrator</span>
                     </div>
                 </div>
             </div>
@@ -200,6 +202,108 @@
         const navlist = document.querySelector('.navlist');
         hamburger.addEventListener('click', () => { navlist.classList.toggle('active'); });
 
+    </script>
+    
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:2000; justify-content:center; align-items:center;">
+        <div class="lightbox-controls" style="position:absolute; top:20px; right:30px; display:flex; gap:20px; z-index:2001; align-items:center; background: rgba(0,0,0,0.6); padding: 5px 15px; border-radius: 30px; backdrop-filter: blur(5px);">
+            <i class="fa-solid fa-magnifying-glass-minus" style="color:white; font-size:24px; cursor:pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" onclick="zoomOut()"></i>
+            <i class="fa-solid fa-magnifying-glass-plus" style="color:white; font-size:24px; cursor:pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" onclick="zoomIn()"></i>
+            <span class="close-lightbox" style="color:white; font-size:36px; cursor:pointer; line-height:24px; margin-left:10px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" onclick="closeLightbox()">&times;</span>
+        </div>
+        <div id="lightbox-img-container" style="width:100%; height:100%; display:flex; justify-content:center; align-items:center; overflow:auto;">
+            <img id="lightbox-img" src="" style="max-width:90%; max-height:90%; border-radius:10px; transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); transform: scale(1); transform-origin: center center; cursor: grab;">
+        </div>
+    </div>
+    
+    <script>
+        let currentScale = 1;
+        let isDragging = false;
+        let startX, startY, translateX = 0, translateY = 0;
+        
+        function updateTransform(transition = false) {
+            const img = document.getElementById('lightbox-img');
+            img.style.transition = transition ? 'transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)' : 'none';
+            img.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentScale})`;
+        }
+
+        function openLightbox(src) {
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            currentScale = 1;
+            translateX = 0;
+            translateY = 0;
+            updateTransform(false);
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+        
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+        
+        function zoomIn() {
+            currentScale += 0.3;
+            updateTransform(true);
+        }
+        
+        function zoomOut() {
+            if (currentScale > 0.4) {
+                currentScale -= 0.3;
+                if (currentScale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+                updateTransform(true);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const lbImg = document.getElementById('lightbox-img');
+            
+            // Mouse Dragging (Free Roam)
+            lbImg.addEventListener('mousedown', (e) => {
+                if (currentScale > 1) {
+                    isDragging = true;
+                    startX = e.clientX - translateX;
+                    startY = e.clientY - translateY;
+                    lbImg.style.cursor = 'grabbing';
+                    e.preventDefault(); 
+                }
+            });
+
+            window.addEventListener('mouseup', () => {
+                isDragging = false;
+                lbImg.style.cursor = 'grab';
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                translateX = e.clientX - startX;
+                translateY = e.clientY - startY;
+                updateTransform(false);
+            });
+
+            // Touch Dragging (Free Roam for Mobile)
+            lbImg.addEventListener('touchstart', (e) => {
+                if (currentScale > 1) {
+                    isDragging = true;
+                    startX = e.touches[0].clientX - translateX;
+                    startY = e.touches[0].clientY - translateY;
+                }
+            }, { passive: true });
+
+            window.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+
+            window.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                if (e.cancelable) e.preventDefault(); 
+                translateX = e.touches[0].clientX - startX;
+                translateY = e.touches[0].clientY - startY;
+                updateTransform(false);
+            }, { passive: false });
+        });
     </script>
 </body>
 

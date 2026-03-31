@@ -119,8 +119,13 @@
     <section id="project-header">
         <div class="container" data-aos="fade-up">
             <h1 class="project-title">Travel Agency Website</h1>
-            <img src="/Images/rto1.jpg"
-                alt="Travel Agency Website" class="project-hero-img" loading="lazy">
+            <div class="image-preview-wrapper">
+                <img src="/Images/rto1.jpg"
+                    alt="Travel Agency Website" class="project-hero-img" loading="lazy" style="cursor: pointer;" onclick="openLightbox(this.src)">
+                <div class="preview-overlay" onclick="openLightbox(this.previousElementSibling.src)">
+                    <i class="fa-solid fa-expand"></i> Preview
+                </div>
+            </div>
 
             <div class="row project-section">
                 <div class="col-md-8" data-aos="fade-right">
@@ -200,6 +205,107 @@
         const navlist = document.querySelector('.navlist');
         hamburger.addEventListener('click', () => { navlist.classList.toggle('active'); });
 
+    </script>
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:2000; justify-content:center; align-items:center;">
+        <div class="lightbox-controls" style="position:absolute; top:20px; right:30px; display:flex; gap:20px; z-index:2001; align-items:center; background: rgba(0,0,0,0.6); padding: 5px 15px; border-radius: 30px; backdrop-filter: blur(5px);">
+            <i class="fa-solid fa-magnifying-glass-minus" style="color:white; font-size:24px; cursor:pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" onclick="zoomOut()"></i>
+            <i class="fa-solid fa-magnifying-glass-plus" style="color:white; font-size:24px; cursor:pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" onclick="zoomIn()"></i>
+            <span class="close-lightbox" style="color:white; font-size:36px; cursor:pointer; line-height:24px; margin-left:10px; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'" onclick="closeLightbox()">&times;</span>
+        </div>
+        <div id="lightbox-img-container" style="width:100%; height:100%; display:flex; justify-content:center; align-items:center; overflow:auto;">
+            <img id="lightbox-img" src="" style="max-width:90%; max-height:90%; border-radius:10px; transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); transform: scale(1); transform-origin: center center; cursor: grab;">
+        </div>
+    </div>
+    
+    <script>
+        let currentScale = 1;
+        let isDragging = false;
+        let startX, startY, translateX = 0, translateY = 0;
+        
+        function updateTransform(transition = false) {
+            const img = document.getElementById('lightbox-img');
+            img.style.transition = transition ? 'transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)' : 'none';
+            img.style.transform = `translate(${translateX}px, ${translateY}px) scale(${currentScale})`;
+        }
+
+        function openLightbox(src) {
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            currentScale = 1;
+            translateX = 0;
+            translateY = 0;
+            updateTransform(false);
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+        
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+        
+        function zoomIn() {
+            currentScale += 0.3;
+            updateTransform(true);
+        }
+        
+        function zoomOut() {
+            if (currentScale > 0.4) {
+                currentScale -= 0.3;
+                if (currentScale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+                updateTransform(true);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const lbImg = document.getElementById('lightbox-img');
+            
+            // Mouse Dragging (Free Roam)
+            lbImg.addEventListener('mousedown', (e) => {
+                if (currentScale > 1) {
+                    isDragging = true;
+                    startX = e.clientX - translateX;
+                    startY = e.clientY - translateY;
+                    lbImg.style.cursor = 'grabbing';
+                    e.preventDefault(); 
+                }
+            });
+
+            window.addEventListener('mouseup', () => {
+                isDragging = false;
+                lbImg.style.cursor = 'grab';
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                translateX = e.clientX - startX;
+                translateY = e.clientY - startY;
+                updateTransform(false);
+            });
+
+            // Touch Dragging (Free Roam for Mobile)
+            lbImg.addEventListener('touchstart', (e) => {
+                if (currentScale > 1) {
+                    isDragging = true;
+                    startX = e.touches[0].clientX - translateX;
+                    startY = e.touches[0].clientY - translateY;
+                }
+            }, { passive: true });
+
+            window.addEventListener('touchend', () => {
+                isDragging = false;
+            });
+
+            window.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                if (e.cancelable) e.preventDefault(); 
+                translateX = e.touches[0].clientX - startX;
+                translateY = e.touches[0].clientY - startY;
+                updateTransform(false);
+            }, { passive: false });
+        });
     </script>
 </body>
 
