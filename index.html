@@ -1,267 +1,1503 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+    <title>Nazeer UX - Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
-
 <body>
-    <section id="home">
-        <div class="cursor"></div>
-        <div class="bgimg">
-             <video autoplay muted loop playsinline preload="metadata" source src="videos/medium-vecteezy_abstract-purple-blue-light-flare-rays-animation-background_11478778_medium.mov"></video>
-            <nav>
-                <ul>
-                    <a href="#works">
-                        <li>Projects</li>
-                    </a>
-                    <a href="#Contact">
-                        <li>Contact</li>
-                    </a>
-                    <a href="#about">
-                        <li>About</li>
-                    </a>
-                </ul>
-            </nav>
-            <h2>PORTFOLIO</h2>
-            <!-- <img src="images/image ns1.png" alt=""> -->
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <h1 class="loader-brand-title" id="loader-title">
+                <span class="char">N</span><span class="char">a</span><span class="char">z</span><span class="char">e</span><span class="char">e</span><span class="char">r</span><span class="char">&nbsp;</span><span class="char">U</span><span class="char">X</span><span class="char">&nbsp;</span><span class="char">™</span>
+            </h1>
+        </div>
+    </div>
+
+    <!-- Navigation Transition Screen Overlay -->
+    <div class="nav-transition-overlay" id="nav-transition-overlay">
+        <div class="nav-transition-content">
+            <h1 class="nav-transition-title" id="nav-transition-title"></h1>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar reveal" data-reveal="fade" data-delay="0.2s">
+        <div class="nav-links">
+            <a href="index.html" class="nav-item">Nazeer UX ™</a>
+            <a href="#about" class="nav-item hover-target" data-nav="About">About</a>
+            <a href="#projects" class="nav-item hover-target" data-nav="Projects">Projects</a>
+            <a href="#blog" class="nav-item hover-target" data-nav="Blog">Blog</a>
+            <a href="#contact" class="nav-item hover-target" data-nav="Contact">Contact</a>
+        </div>
+        <div class="hamburger hover-target" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html" class="mobile-link">Nazeer UX ™</a>
+        <a href="#about" class="mobile-link" data-nav="About">About</a>
+        <a href="#projects" class="mobile-link" data-nav="Projects">Projects</a>
+        <a href="#blog" class="mobile-link" data-nav="Blog">Blog</a>
+        <a href="#contact" class="mobile-link" data-nav="Contact">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-container reveal" data-reveal="up" data-delay="0.4s">
+            
+            <!-- Top Left: Main Title -->
+            <h1 class="hero-title reveal" data-reveal="up" data-delay="0.6s">Nazeer UX ™</h1>
+            
+            <!-- Middle Right: Skills & Connect -->
+            <div class="hero-intro reveal" data-reveal="left" data-delay="0.8s">
+                <p>Product Strategy & UX Leadership<br>
+                   Design Systems & Scalable UI<br>
+                   Cross-Functional Collaboration<br>
+                   User-Centered Research</p>
+                <a href="#contact" class="btn-connect hover-target" data-nav="Contact">Connect</a>
+            </div>
+
+            <!-- Bottom Left: Tagline -->
+            <div class="hero-tagline reveal" data-reveal="up" data-delay="1.0s">
+                <p><strong>No hype. No distractions.</strong> Just purposeful design and<br>product thinking focused on solving real user problems.</p>
+            </div>
+
+            <!-- Bottom Right: Copyright -->
+            <div class="hero-copyright reveal" data-reveal="up" data-delay="1.0s">
+                <p>©2026 Nazeer UX TM</p>
+            </div>
             
         </div>
-    
     </section>
 
-    <section id="about">
-        <div class="container">
-            <div class="row aboutsection">
-                <div class="col md 12 col-sm-12">
-                    <div class="cardaboutme">
-                        <h3>About Me</h3>
-                        <p>I am Naseer Ui/Ux Designer and Front end Developer Whos very passionate as well as excited to
-                            create
-                            new
-                            and clean User interfaces for better user experience's with user centered designs.
-                        <div class="dwnldcv">
-                            <a class="btndwnld" href="docs/Nazeer ck resume.pdf" download="My_Resume.pdf">
-                                <p>
-                                    Download CV
-                                </p><img src="images/arrow-down.svg" alt="">
-                            </a>
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+        <div class="projects-header reveal" data-reveal="up">
+            <div class="projects-title-wrapper">
+                <h2 class="projects-title">Featured Work.<span class="section-count-dark">(6)</span></h2>
+                <span class="copyright">©2026</span>
+            </div>
+            <div class="projects-description">
+                <p>Selected end-to-end product design case studies, design systems, and AI platforms.</p>
+            </div>
+            <div class="arrow-icon">
+                ↗
+            </div>
+        </div>
 
-                            <div class="icncv">
-                                <div class="iconcircle">
-                                    <a target="_blank" href="https://wa.me/+919961375752 "  >
-                                        <i class="fa-brands fa-whatsapp"></i>
-                                    </a>
-                                </div>
-                                <div class="iconcircle">
-                                    <a target="_blank" href="https://www.linkedin.com/in/muhammed-naseer-ck-14aaa8265?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-                                        <i class="fa-brands fa-linkedin-in"></i>
-                                    </a>
-                                </div>
-                                <div class="iconcircle">
-                                    <a target="_blank" href="https://www.instagram.com/nazeeerck/">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </a>
-                                </div>
+        <div class="projects-grid">
+            
+            <!-- Project 01: Postr (Featured Case Study) -->
+            <div class="project-card reveal hover-target" data-reveal="up" id="postr-card-trigger">
+                <div class="project-image-wrapper">
+                    <img src="images/postr_mockup.png" alt="Postr AI Social Media Platform Mockup" class="project-image">
+                    <span class="project-tag-badge">Featured Case Study</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-num">01</span>
+                        <span class="project-category">AI Product Design • SaaS</span>
+                    </div>
+                    <h3 class="project-title">Postr — Social Identity & Business Platform</h3>
+                    <p class="project-desc">Grow your personal identity and business presence from one unified AI-powered platform. Create, schedule, publish, and analyze content seamlessly.</p>
+                    <button class="btn-case-study hover-target" id="open-postr-modal-btn">
+                        Explore Case Study ↗
+                    </button>
+                </div>
+            </div>
 
+            <!-- Project 02: Gym Hub (Featured Case Study) -->
+            <div class="project-card reveal hover-target" data-reveal="up" data-delay="0.1s" id="gymhub-card-trigger">
+                <div class="project-image-wrapper">
+                    <img src="images/gymhub_cover_influencer.jpg" alt="Gym Hub Gym Influencer Workout Cover" class="project-image">
+                    <span class="project-tag-badge">Featured Case Study</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-num">02</span>
+                        <span class="project-category">Mobile & Admin Dashboard • Fitness SaaS</span>
+                    </div>
+                    <h3 class="project-title">Gym Hub — Admin Dashboard & Mobile App</h3>
+                    <p class="project-desc">A unified mobile & dashboard management system empowering gym owners, admins, and members with real-time attendance, billing, and trainer coordination.</p>
+                    <button class="btn-case-study hover-target" id="open-gymhub-modal-btn">
+                        Explore Case Study ↗
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 03: Simah Real Estate Experience (Featured Case Study) -->
+            <div class="project-card reveal hover-target" data-reveal="up" data-delay="0.2s" id="simah-card-trigger">
+                <div class="project-image-wrapper">
+                    <img src="images/simah_sheikh_cover.jpg" alt="Simah Real Estate Experience App Saudi Arabia" class="project-image">
+                    <span class="project-tag-badge">Featured Case Study</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-num">03</span>
+                        <span class="project-category">Mobile & Interactive Kiosk • Saudi Arabia PropTech</span>
+                    </div>
+                    <h3 class="project-title">Simah — Real Estate Experience App</h3>
+                    <p class="project-desc">A premium luxury real estate mobile app and exhibition kiosk interface showcasing properties in Saudi Arabia through immersive 360° and VR interactive walkthroughs.</p>
+                    <button class="btn-case-study hover-target" id="open-simah-modal-btn">
+                        Explore Case Study ↗
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 04: PDFr Utility App (Featured Case Study) -->
+            <div class="project-card reveal hover-target" data-reveal="up" data-delay="0.3s" id="pdfr-card-trigger">
+                <div class="project-image-wrapper">
+                    <img src="images/pdfr_cover.png" alt="PDFr All-in-One PDF Utility App Mockup" class="project-image">
+                    <span class="project-tag-badge">Featured Case Study</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-num">04</span>
+                        <span class="project-category">Mobile & Web Utility • Document SaaS</span>
+                    </div>
+                    <h3 class="project-title">PDFr — All-in-One PDF Utility App</h3>
+                    <p class="project-desc">A lightweight, task-driven productivity application designed to simplify reading, editing, merging, splitting, and scanning PDFs with zero friction.</p>
+                    <button class="btn-case-study hover-target" id="open-pdfr-modal-btn">
+                        Explore Case Study ↗
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 05: Nas Technicals UAE (Featured Corporate Web Case Study) -->
+            <div class="project-card reveal hover-target" data-reveal="up" data-delay="0.4s" id="nas-card-trigger">
+                <div class="project-image-wrapper" style="aspect-ratio: 16 / 9; height: 360px;">
+                    <img src="images/nas_cover.png" alt="Nas Technicals UAE Corporate Engineering Website Mockup" class="project-image">
+                    <span class="project-tag-badge">Featured Web Case Study</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-num">05</span>
+                        <span class="project-category">Corporate Website • UAE Engineering & IT Solutions</span>
+                    </div>
+                    <h3 class="project-title">Nas Technicals UAE — Engineering & IT Corporate Website</h3>
+                    <p class="project-desc">A conversion-focused corporate web platform engineered for a UAE technical solutions provider, communicating company credibility, service offerings, and streamlined lead generation.</p>
+                    <button class="btn-case-study hover-target" id="open-nas-modal-btn">
+                        Explore Case Study ↗
+                    </button>
+                </div>
+            </div>
+
+            <!-- Project 06: EzyRation (Featured Accessibility & GovTech SaaS Case Study) -->
+            <div class="project-card reveal hover-target" data-reveal="up" data-delay="0.5s" id="ezyration-card-trigger">
+                <div class="project-image-wrapper" style="height: 360px;">
+                    <img src="images/ezyration_cover.png" alt="EzyRation Accessible Ration Management App Mockup" class="project-image">
+                    <span class="project-tag-badge">Featured Case Study</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-meta">
+                        <span class="project-num">06</span>
+                        <span class="project-category">Mobile & Social Impact • Accessible GovTech SaaS</span>
+                    </div>
+                    <h3 class="project-title">EzyRation — Accessible Ration Management & Ordering App</h3>
+                    <p class="project-desc">An accessibility-first mobile application simplifying India’s public ration distribution for elderly users, people with disabilities, and remote family members.</p>
+                    <button class="btn-case-study hover-target" id="open-ezyration-modal-btn">
+                        Explore Case Study ↗
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Mission Statement Section -->
+    <section class="mission-section" id="about">
+        <div class="mission-container">
+            <div class="mission-content reveal" data-reveal="up">
+                <div class="mission-left-col">
+                    <h3 class="mission-text">
+                        <strong>I create simple and effective user experiences</strong>
+                        <span>turning complex ideas into intuitive and<br>meaningful digital products.</span>
+                    </h3>
+                </div>
+                <div class="mission-right-col">
+                    <div class="mission-caption">
+                        <p>Good design isn't just about how it looks, it's about how it works.<br>That's our core philosophy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skillsets Section -->
+    <section class="skillsets-section reveal" data-reveal="up">
+        <div class="skillsets-container">
+            <div class="editorial-badge-tag">
+                <span class="plus-icon-circle">+</span> What I do
+            </div>
+            <h2 class="skillsets-title">Skillsets.<span class="section-count">(5)</span></h2>
+
+            <div class="skill-accordion-list">
+                
+                <!-- Item 001: Core UX/UI -->
+                <div class="skill-accordion-item active" data-index="001">
+                    <div class="accordion-header hover-target">
+                        <span class="accordion-num">(001)</span>
+                        <div class="accordion-title-wrap">
+                            <h3 class="accordion-title">Core UX/UI</h3>
+                        </div>
+                        <button class="accordion-toggle-btn" aria-label="Toggle accordion">−</button>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <div class="accordion-thumb-box">
+                                <img src="images/skill_core_uxui.png" alt="Core UX/UI Thumbnail" class="accordion-thumb-img">
+                            </div>
+                            <div class="accordion-info">
+                                <h4 class="accordion-info-title">Product Thinking & UX</h4>
+                                <p class="accordion-info-desc">Solving the right problems by aligning user needs with business goals through research, architecture, and interaction.</p>
+                            </div>
+                            <div class="accordion-skills-side">
+                                <span class="skills-side-label">Core Areas</span>
+                                <div class="accordion-pills-grid">
+                                    <span class="skill-pill hover-target">UI Design</span>
+                                    <span class="skill-pill hover-target">UX Design</span>
+                                    <span class="skill-pill hover-target">Product Design</span>
+                                    <span class="skill-pill hover-target">User Research</span>
+                                    <span class="skill-pill hover-target">Interaction Design</span>
+                                    <span class="skill-pill hover-target">Information Architecture</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-                <!-- skills -->
-
-                <div class="col md  skills">
-                    <div class="row g-2 skillssection">
-                        <div class="col-md-7  col-sm-6 col-12">
-                            <div class="cardsskills">
-                                <img src="images/scissor.svg" alt="">
-                                <div class="carddetails">
-                                    <h4>App Design</h4>
-                                    <p>I design modern, user-friendly mobile apps with clean layouts, smooth flows,
-                                        and
-                                        clear visual hierarchy.</p>
-                                </div>
-                            </div>
+                <!-- Item 002: Systems & Structure -->
+                <div class="skill-accordion-item" data-index="002">
+                    <div class="accordion-header hover-target">
+                        <span class="accordion-num">(002)</span>
+                        <div class="accordion-title-wrap">
+                            <h3 class="accordion-title">Systems & Structure</h3>
                         </div>
-                        <div class="col-md-5  col-sm-6 col-12">
-                            <div class="cardsskills">
-                                <img src="images/wand.svg" alt="">
-                                <div class="carddetails">
-                                    <h4>Web Design</h4>
-                                    <p>I design modern, responsive websites that look good on any device and feel easy
-                                        to use. From landing pages to full product sites</p>
-                                </div>
+                        <button class="accordion-toggle-btn" aria-label="Toggle accordion">+</button>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <div class="accordion-thumb-box">
+                                <img src="images/skill_systems_structure.png" alt="Systems & Structure Thumbnail" class="accordion-thumb-img">
                             </div>
-                        </div>
-                        <div class="col-md-3  col-sm-6 col-12">
-                            <div class="cardsskills">
-                                <img src="images/wireframing.svg" alt="">
-                                <div class="carddetails">
-                                    <h4>Wireframing</h4>
-                                    <p>I create wireframes to explore ideas quickly before development</p>
-                                </div>
+                            <div class="accordion-info">
+                                <h4 class="accordion-info-title">Visual & Interaction Architecture</h4>
+                                <p class="accordion-info-desc">Architecting enterprise design systems, complex data visualization dashboards, and scalable workflow structures.</p>
                             </div>
-                        </div>
-                        <div class="col-md-3  col-sm-6">
-                            <div class="cardsskills">
-                                <img src="images/protoyping.svg" alt="">
-                                <div class="carddetails">
-                                    <h4>Prototyping</h4>
-                                    <p>I create wireframes and interactive prototypes to explore ideas quickly before
-                                        development</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6  col-sm-6">
-                            <div class="cardsskills">
-                                <img src="images/code-circle.svg" alt="">
-                                <div class="carddetails">
-                                    <h4>Frond-end Development</h4>
-                                    <p>I build responsive, interactive user interfaces using HTML CSS and JavaScript. I
-                                        turn designs into clean reusable code across devices and browsers</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12  col-sm-6">
-                            <div class="cardsskills">
-                                <img src="images/brush.svg" alt="">
-                                <div class="carddetails">
-                                    <h4>User Experiance</h4>
-                                    <p>As a UX designer, I work on user research, journey mapping, and usability testing
-                                        to create flows that feel natural and frustration-free.</p>
+                            <div class="accordion-skills-side">
+                                <span class="skills-side-label">Core Areas</span>
+                                <div class="accordion-pills-grid">
+                                    <span class="skill-pill hover-target">Design Systems</span>
+                                    <span class="skill-pill hover-target">Dashboard Design</span>
+                                    <span class="skill-pill hover-target">Admin Panel Design</span>
+                                    <span class="skill-pill hover-target">Data Visualization</span>
+                                    <span class="skill-pill hover-target">Workflow Design</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
+
+                <!-- Item 003: Digital Products -->
+                <div class="skill-accordion-item" data-index="003">
+                    <div class="accordion-header hover-target">
+                        <span class="accordion-num">(003)</span>
+                        <div class="accordion-title-wrap">
+                            <h3 class="accordion-title">Digital Products</h3>
+                        </div>
+                        <button class="accordion-toggle-btn" aria-label="Toggle accordion">+</button>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <div class="accordion-thumb-box">
+                                <img src="images/skill_digital_products.png" alt="Digital Products Thumbnail" class="accordion-thumb-img">
+                            </div>
+                            <div class="accordion-info">
+                                <h4 class="accordion-info-title">Mobile & Web Platforms</h4>
+                                <p class="accordion-info-desc">Crafting end-to-end mobile applications, web platforms, and responsive SaaS products with seamless user flows.</p>
+                            </div>
+                            <div class="accordion-skills-side">
+                                <span class="skills-side-label">Core Areas</span>
+                                <div class="accordion-pills-grid">
+                                    <span class="skill-pill hover-target">Mobile App Design</span>
+                                    <span class="skill-pill hover-target">Web App Design</span>
+                                    <span class="skill-pill hover-target">SaaS Product Design</span>
+                                    <span class="skill-pill hover-target">Responsive Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 004: Advanced & Differentiators -->
+                <div class="skill-accordion-item" data-index="004">
+                    <div class="accordion-header hover-target">
+                        <span class="accordion-num">(004)</span>
+                        <div class="accordion-title-wrap">
+                            <h3 class="accordion-title">Advanced & Differentiators</h3>
+                        </div>
+                        <button class="accordion-toggle-btn" aria-label="Toggle accordion">+</button>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <div class="accordion-thumb-box">
+                                <img src="images/skill_advanced_ai.png" alt="Advanced UX Thumbnail" class="accordion-thumb-img">
+                            </div>
+                            <div class="accordion-info">
+                                <h4 class="accordion-info-title">AI & Inclusive Strategy</h4>
+                                <p class="accordion-info-desc">Integrating AI-driven UX, automated workflows, and WCAG 2.1 compliant inclusive accessibility design.</p>
+                            </div>
+                            <div class="accordion-skills-side">
+                                <span class="skills-side-label">Core Areas</span>
+                                <div class="accordion-pills-grid">
+                                    <span class="skill-pill hover-target">AI UX</span>
+                                    <span class="skill-pill hover-target">Automation Design</span>
+                                    <span class="skill-pill hover-target">Accessibility Design</span>
+                                    <span class="skill-pill hover-target">Inclusive Design</span>
+                                    <span class="skill-pill hover-target">UX Strategy</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 005: Tools -->
+                <div class="skill-accordion-item" data-index="005">
+                    <div class="accordion-header hover-target">
+                        <span class="accordion-num">(005)</span>
+                        <div class="accordion-title-wrap">
+                            <h3 class="accordion-title">Tools & Software</h3>
+                        </div>
+                        <button class="accordion-toggle-btn" aria-label="Toggle accordion">+</button>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <div class="accordion-thumb-box">
+                                <img src="images/skill_design_tools.png" alt="Tools Thumbnail" class="accordion-thumb-img">
+                            </div>
+                            <div class="accordion-info">
+                                <h4 class="accordion-info-title">Design & Production Tools</h4>
+                                <p class="accordion-info-desc">High-speed mastery of industry-standard design tools, high-fidelity prototyping, and motion software.</p>
+                            </div>
+                            <div class="accordion-skills-side">
+                                <span class="skills-side-label">Core Areas</span>
+                                <div class="accordion-pills-grid">
+                                    <span class="skill-pill hover-target">Figma</span>
+                                    <span class="skill-pill hover-target">Prototyping</span>
+                                    <span class="skill-pill hover-target">Wireframing</span>
+                                    <span class="skill-pill hover-target">Adobe Photoshop</span>
+                                    <span class="skill-pill hover-target">Adobe Illustrator</span>
+                                    <span class="skill-pill hover-target">Adobe After Effects</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sinan CP Style Expert Insights / Blog Section -->
+    <section class="sinan-blog-section" id="blog">
+        
+        <!-- Header Block -->
+        <div class="sinan-blog-header reveal" data-reveal="up">
+            <h2 class="sinan-blog-main-title">Expert Insights.</h2>
+            
+            <div class="sinan-blog-sub-row">
+                <div class="sinan-blog-badge">
+                    <span class="plus-icon">+</span> Blog
+                </div>
+                
+                <div class="sinan-blog-lead-text">
+                    <span class="lead-dark">Expert insights on AI agents, SEO search, cloud tech, and growth</span>
+                    <span class="lead-muted"> to help your business scale.</span>
+                </div>
+                
+                <div class="sinan-blog-side-note">
+                    From design principles to technical optimizations—everything you need for digital success.
+                </div>
+            </div>
+        </div>
+
+        <!-- Sinan CP Asymmetric Blog Grid (High-Volume Google SEO Content) -->
+        <div class="sinan-blog-grid-container reveal" data-reveal="up" data-delay="0.2s">
+            
+            <!-- Top Row Grid (1 Large Hero Card + 2 White Feature Cards) -->
+            <div class="sinan-blog-top-row">
+                
+                <!-- Main Featured Hero Card: Generative AI & Autonomous Agents -->
+                <a href="#blog" class="sinan-blog-hero-card hover-target">
+                    <div class="sinan-hero-bg-wrapper">
+                        <img src="images/seo_blog_ai_agents.png" alt="Generative AI and Autonomous Agents" class="sinan-hero-bg">
+                    </div>
+                    <div class="sinan-hero-overlay">
+                        <span class="sinan-blog-date">Feb 10, 2026</span>
+                        <h3 class="sinan-hero-title">Generative AI & LLMs in 2026: How Autonomous AI Agents Are Transforming Work</h3>
+                        <p class="sinan-hero-excerpt">An in-depth breakdown of autonomous AI agents, tool-calling frameworks, and synthetic workflows redefining global productivity.</p>
+                    </div>
+                </a>
+
+                <!-- Middle White Card: AI Search SEO & SGE -->
+                <a href="#blog" class="sinan-blog-white-card hover-target">
+                    <div class="sinan-card-top-bar">
+                        <img src="images/seo_blog_ai_seo.png" alt="AI Search Engine Optimization" class="sinan-thumb-img">
+                        <div class="sinan-plus-btn">+</div>
+                    </div>
+                    <div class="sinan-card-content">
+                        <span class="sinan-blog-date">Feb 04, 2026</span>
+                        <h3 class="sinan-card-title">Search Engine Optimization (SEO) in the Era of AI Search & Google SGE</h3>
+                        <p class="sinan-card-excerpt">How to optimize your digital platform to rank on Perplexity, ChatGPT Search, and Google Gemini AI overviews.</p>
+                    </div>
+                </a>
+
+                <!-- Right White Card: SaaS Infrastructure -->
+                <a href="#blog" class="sinan-blog-white-card hover-target">
+                    <div class="sinan-card-top-bar">
+                        <img src="images/seo_blog_saas_architecture.png" alt="SaaS Infrastructure Architecture" class="sinan-thumb-img">
+                        <div class="sinan-plus-btn">+</div>
+                    </div>
+                    <div class="sinan-card-content">
+                        <span class="sinan-blog-date">Jan 28, 2026</span>
+                        <h3 class="sinan-card-title">Building Scalable SaaS Infrastructure: Cloud Architecture for 10x Scale</h3>
+                        <p class="sinan-card-excerpt">Key architectural patterns, serverless scaling, and microservice strategies powering fast startup growth.</p>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Bottom Row Grid (4 Columns - High Volume Google SEO Topics) -->
+            <div class="sinan-blog-bottom-row">
+                
+                <!-- Bottom Card 1: Personal Branding -->
+                <a href="#blog" class="sinan-blog-white-card hover-target">
+                    <div class="sinan-card-top-bar">
+                        <img src="images/blog_darkmode.png" alt="Personal Branding for Tech Leaders" class="sinan-thumb-img">
+                        <div class="sinan-plus-btn">+</div>
+                    </div>
+                    <div class="sinan-card-content">
+                        <span class="sinan-blog-date">Jan 20, 2026</span>
+                        <h3 class="sinan-card-title">Personal Branding & Authority Building for Founders & Tech Leaders</h3>
+                        <p class="sinan-card-excerpt">How founders leverage digital media and thought leadership to attract top talent and investor capital.</p>
+                    </div>
+                </a>
+
+                <!-- Bottom Card 2: Zero-Trust Cybersecurity -->
+                <a href="#blog" class="sinan-blog-white-card hover-target">
+                    <div class="sinan-card-top-bar">
+                        <img src="images/skill_advanced_ai.png" alt="Cybersecurity & Zero-Trust Architecture" class="sinan-thumb-img">
+                        <div class="sinan-plus-btn">+</div>
+                    </div>
+                    <div class="sinan-card-content">
+                        <span class="sinan-blog-date">Jan 14, 2026</span>
+                        <h3 class="sinan-card-title">Zero-Trust Cybersecurity: Protecting Cloud Enterprise Data</h3>
+                        <p class="sinan-card-excerpt">Why Zero-Trust access and AI-driven threat detection are mandatory for enterprise data protection.</p>
+                    </div>
+                </a>
+
+                <!-- Bottom Card 3: Managing Remote Teams -->
+                <a href="#blog" class="sinan-blog-white-card hover-target">
+                    <div class="sinan-card-top-bar">
+                        <img src="images/blog_wolf.png" alt="Remote Work Engineering Culture" class="sinan-thumb-img">
+                        <div class="sinan-plus-btn">+</div>
+                    </div>
+                    <div class="sinan-card-content">
+                        <span class="sinan-blog-date">Jan 08, 2026</span>
+                        <h3 class="sinan-card-title">The Remote Work Engine: Managing High-Performance Asynchronous Teams</h3>
+                        <p class="sinan-card-excerpt">Actionable blueprints for global hiring, async documentation, and driving multi-timezone performance.</p>
+                    </div>
+                </a>
+
+                <!-- Bottom Card 4: No-Code Automations -->
+                <a href="#blog" class="sinan-blog-white-card hover-target">
+                    <div class="sinan-card-top-bar">
+                        <img src="images/blog_redpanda.png" alt="No-Code and AI Automations" class="sinan-thumb-img">
+                        <div class="sinan-plus-btn">+</div>
+                    </div>
+                    <div class="sinan-card-content">
+                        <span class="sinan-blog-date">Jan 02, 2026</span>
+                        <h3 class="sinan-card-title">No-Code & AI Automations: Launching Products 5x Faster</h3>
+                        <p class="sinan-card-excerpt">How modern startups automate operations and validate product ideas without writing heavy codebases.</p>
+                    </div>
+                </a>
 
             </div>
 
         </div>
 
-
-    </section>
-    <section id="projects">
-        <div class="container">
-            <div class="skillshead">
-
-                <h2>Skills
-                </h2>
-                <div class="row g-2 skillsicons">
-                    <div class="col-md-2 col-sm-1 ">
-                        <img src="images/html.svg" alt="">
-                    </div>
-                    <div class="col-md-2  col-sm-1">
-                        <img src="/images/css3.svg" alt="">
-                    </div>
-                    <div class="col-md-2  col-sm-1"><img src="images/Figma.svg" alt=""></div>
-                    <div class="col-md-2  col-sm-1"><img src="images/ps.svg" alt=""></div>
-                    <!-- <div class="col-md-2  col-sm-1"><img src="images/affinity.svg" alt=""></div> -->
-
-                </div>
-                <p>I specialize in creating responsive, user-friendly websites using a proven
-                    technology stack. I build the structural foundation with semantic HTML and craft visual layouts
-                    using CSS. For interactivity, I leverage the power of jQuery to streamline DOM manipulation, handle
-                    events efficiently, and implement smooth animations, ensuring a consistent experience across
-                    different browser</p>
-            </div>
-            <div class="education">
-
-                <h2>Education
-                </h2>
-                <ul>
-                    <li>Advanced Diploma in Ui/Ux Designing ,Skilz hub kotakkal </li>
-                    <li>BA English Language and literature ,Calicut university</li>
-                </ul>
-            </div>
         </div>
     </section>
 
-    <section id="works">
-        <div class="container">
-            <div class="wrks">
-                <h2>Works
-                </h2>
-            </div>
+    <!-- Footer & Contact Form Section -->
+    <footer class="footer-section reveal" data-reveal="up" id="contact">
+        <div class="footer-content">
+            <h2 class="footer-title">Let's build something great together.</h2>
+            <p class="footer-subtitle">Have a project in mind or want to collaborate? Drop a message below.</p>
+            
+            <!-- Contact Form -->
+            <form class="portfolio-contact-form" id="portfolio-contact-form" action="https://formsubmit.co/mhdnaseerck@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New Portfolio Inquiry - Nazeer UX">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
 
-            <div class="row g-2">
-                <div class="col-md-6">
-                    <div class="cardwrk">
-                        <img src="images/ez.png" alt="">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contact-name" class="form-label">Name</label>
+                        <input type="text" name="name" id="contact-name" class="form-input hover-target" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email" class="form-label">Email</label>
+                        <input type="email" name="email" id="contact-email" class="form-input hover-target" placeholder="your.email@example.com" required>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="cardwrk"><img src="images/bank.png" alt=""></div>
+                <div class="form-group">
+                    <label for="contact-message" class="form-label">Message</label>
+                    <textarea name="message" id="contact-message" class="form-textarea hover-target" placeholder="Tell me about your project, goals, or design vision..." required></textarea>
                 </div>
-                <div class="col-md-6">
-                    <div class="cardwrk"><img src="images/pringles.png" alt=""></div>
-                </div>
-                <div class="col-md-6">
-                    <div class="cardwrk"><img src="images/dasboard.png" alt=""></div>
-                </div>
-            </div>
-            <button class="btnviewmore">
-                <a href="projects1.html"> View More</a>
-               
-            </button>
+                <button type="submit" class="btn-send-cta hover-target">
+                    Send Message ↗
+                </button>
+            </form>
         </div>
-    </section>
-    <footer>
-        <section id="Contact">
-            <div class="container">
-                <h2>Lets Make It Happen !</h2>
-                <h3>Always Open to new oppertunities, collaborations, creative challanges.Lets work together to bring your
-                    ideas to life !</h3>
-                <h4>Contact</h4>
-                <a class="number" href="tel:+919961375752">+91 9961375752</a>
-                <a class="mail" href="nzryt7@gmail.com">nzryt7@gmail.com</a>
-                <p class="cc">© All rights reserved by Muhammed Naseer ck</p>
-<div class="floatingicon">
-    <a href="https://wa.me/+919961375752"><img src="images/whatsapp12.png" alt=""></a>
-</div>
-<div class="floatingicon1">
-    <a href="#home"><img src="images/up-arrow.png" alt=""></a>
-</div>
 
+        <!-- Editorial Naseer Footer (3-Column Grid + Giant Brand Title) -->
+        <div class="naseer-footer-wrapper">
+            <div class="naseer-footer-grid">
+                <!-- Col 1: Contact Info -->
+                <div class="naseer-footer-col">
+                    <span class="naseer-footer-plus">+</span>
+                    <div class="naseer-footer-contact-box">
+                        <span class="naseer-footer-phone">+91 9961375752</span>
+                        <a href="mailto:mhdnaseerck@gmail.com" class="naseer-footer-email hover-target">
+                            <span class="email-bullet">●</span> mhdnaseerck@gmail.com
+                        </a>
+                    </div>
+                </div>
 
+                <!-- Col 2: Navigation -->
+                <div class="naseer-footer-col">
+                    <span class="naseer-footer-plus">+</span>
+                    <span class="naseer-footer-cat-label">Navigation</span>
+                    <ul class="naseer-footer-links">
+                        <li><a href="index.html" class="hover-target">Home</a></li>
+                        <li><a href="#about" class="hover-target" data-nav="About">About</a></li>
+                        <li><a href="#projects" class="hover-target" data-nav="Projects">Projects</a></li>
+                        <li><a href="blog.html" class="hover-target">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Social -->
+                <div class="naseer-footer-col">
+                    <span class="naseer-footer-plus">+</span>
+                    <span class="naseer-footer-cat-label">Social</span>
+                    <ul class="naseer-footer-links">
+                        <li><a href="https://www.behance.net/muhammednaseerck" target="_blank" rel="noopener noreferrer" class="hover-target">Behance ↗</a></li>
+                        <li><a href="https://www.linkedin.com/in/muhammed-naseer-ck-/" target="_blank" rel="noopener noreferrer" class="hover-target">LinkedIn ↗</a></li>
+                        <li><a href="https://wa.me/919961375752" target="_blank" rel="noopener noreferrer" class="hover-target">WhatsApp ↗</a></li>
+                        <li><a href="mailto:mhdnaseerck@gmail.com" class="hover-target">Email ↗</a></li>
+                    </ul>
+                </div>
             </div>
-        </section>
+
+            <!-- Giant Brand Title -->
+            <div class="naseer-footer-giant-title">
+                nazeer<span class="tm-symbol">™</span>
+            </div>
+        </div>
     </footer>
-    <script>
-        const cursor = document.querySelector('.cursor');
 
-        document.addEventListener('mousemove', e => {
-            cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
-        });
+    <!-- Full Case Study Modal: Postr -->
+    <div class="case-study-modal" id="postr-modal">
+        <div class="modal-backdrop" id="close-postr-modal-backdrop"></div>
+        <div class="modal-container">
+            <header class="modal-header">
+                <div class="modal-brand">
+                    <span class="modal-tag">Featured Product Design Case Study</span>
+                    <h2 class="modal-title">Postr</h2>
+                </div>
+                <button class="modal-close-btn hover-target" id="close-postr-modal-btn">✕ Close</button>
+            </header>
+            <div class="modal-progress-wrapper">
+                <div class="modal-progress-bar"></div>
+            </div>
 
-        document.addEventListener('click', e => {
-            cursor.classList.add("expand");
-            setTimeout(() => {
-                cursor.classList.remove("expand");
-            }, 500);
-        });
-    </script>
+            <div class="modal-body cs-modal-body">
+                
+                <span class="cs-top-brand">Postr</span>
 
+                <!-- Top Hero 2-Column Mockups Grid -->
+                <div class="cs-hero-grid">
+                    <div class="cs-hero-card mint-bg">
+                        <img src="images/postr_cover.png" alt="Postr Laptop & Mobile Platform Mockup">
+                    </div>
+                    <div class="cs-hero-card grey-bg">
+                        <img src="images/postr_mockup_1.jpg" alt="Postr Handheld Tablet Mobile App UI">
+                    </div>
+                </div>
+
+                <!-- Section: Challenges -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Challenges
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">A key challenge with Postr was creating an AI legal and social media platform that stayed secure and compliant while keeping the interface simple and easy to use.</h3>
+                        <p class="cs-subtext">We needed to balance complex content generation workflows with clear, straightforward features that users could trust. Another challenge was building flexibility for different brand identities and multi-channel publishing without making the product complicated. Integrating AI required close work with content experts to ensure the platform delivered accurate, high-impact results.</p>
+                        <button class="cs-live-btn">App Design <span class="cs-btn-dot">●</span></button>
+                    </div>
+                </div>
+
+                <!-- Full Width Showcase Banner -->
+                <div class="cs-full-banner">
+                    <img src="images/postr_banner_showcase.png" alt="Postr Mobile Desk Stand Showcase">
+                </div>
+
+                <!-- 2-Column Mobile App Mockups Showcase (Scheduled Posts & Pro Subscription) -->
+                <div class="cs-hero-grid cs-mobile-showcase-grid" style="margin-top: 32px;">
+                    <div class="cs-hero-card mint-bg">
+                        <img src="images/postr_mockup_scheduled.jpg" alt="Postr Scheduled Calendar Mobile App UI">
+                    </div>
+                    <div class="cs-hero-card grey-bg">
+                        <img src="images/postr_mockup_pro.jpg" alt="Postr PRO Subscription Mobile App UI">
+                    </div>
+                </div>
+
+                <!-- Section: Final Result -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Final result
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">To address these challenges, I focused on designing a clean, user-friendly interface that simplified complex content creation without sacrificing speed or brand compliance.</h3>
+                        <p class="cs-subtext">I worked closely with brand strategists and creators to translate their daily workflows into intuitive features, making sure the AI suggestions were clear and actionable for users at every step. I also built flexibility into the platform by creating modular components that could adapt to different social channels and brand guidelines. This approach allowed the product to scale smoothly as user needs evolved, while keeping the overall experience consistent and easy to navigate.</p>
+                    </div>
+                </div>
+
+                <!-- Section: Core Features -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Core features
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">Modular Architecture & Smart Social AI Workflows</h3>
+                        <p class="cs-subtext">Postr unifies AI content generation, poster design, interactive scheduling, and real-time analytics into one sleek dashboard.</p>
+                        <div class="postr-features-grid" style="margin-top: 24px;">
+                            <div class="feature-item">
+                                <h4>AI Content Assistant</h4>
+                                <p>Generate viral captions, hashtags, hooks, and multi-channel post variations in seconds.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>AI Graphic Generator</h4>
+                                <p>Automate branded story covers, poster visuals, and promo graphic design.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Smart Scheduler</h4>
+                                <p>Drag-and-drop interactive calendar for Instagram, LinkedIn, X (Twitter), and TikTok.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Growth Analytics</h4>
+                                <p>Real-time tracking of impressions, follower growth rates, and campaign engagement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Next Projects Footer Section -->
+                <div class="cs-next-projects">
+                    <div class="cs-next-header">
+                        <div class="cs-next-title-box">
+                            <h2 class="cs-next-title">Next projects.</h2>
+                            <p class="cs-next-subtitle">(2016-25©)</p>
+                        </div>
+                        <button class="cs-all-projects-btn">All projects <span class="cs-btn-dot">●</span></button>
+                    </div>
+
+                    <div class="cs-next-grid">
+                        <div class="cs-next-card">
+                            <div class="cs-next-card-header">
+                                <div class="cs-next-card-info">
+                                    <span class="cs-next-card-name">GymHub.</span>
+                                    <span class="cs-next-card-meta">/ Mobile & Admin SaaS • 2026</span>
+                                </div>
+                                <span class="cs-next-card-dots">•••</span>
+                            </div>
+                            <img src="images/gymhub_cover_influencer.jpg" alt="GymHub Project Showcase" class="cs-next-card-img">
+                        </div>
+
+                        <div class="cs-next-card">
+                            <div class="cs-next-card-header">
+                                <div class="cs-next-card-info">
+                                    <span class="cs-next-card-name">Simah.</span>
+                                    <span class="cs-next-card-meta">/ Saudi Real Estate SaaS • 2026</span>
+                                </div>
+                                <span class="cs-next-card-dots">•••</span>
+                            </div>
+                            <img src="images/simah_sheikh_cover.jpg" alt="Simah Project Showcase" class="cs-next-card-img">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Case Study Modal: Gym Hub -->
+    <div class="case-study-modal" id="gymhub-modal">
+        <div class="modal-backdrop" id="close-gymhub-modal-backdrop"></div>
+        <div class="modal-container">
+            <header class="modal-header">
+                <div class="modal-brand">
+                    <span class="modal-tag">Featured Mobile & Admin SaaS Case Study</span>
+                    <h2 class="modal-title">Gym Hub</h2>
+                </div>
+                <button class="modal-close-btn hover-target" id="close-gymhub-modal-btn">✕ Close</button>
+            </header>
+            <div class="modal-progress-wrapper">
+                <div class="modal-progress-bar"></div>
+            </div>
+
+            <div class="modal-body cs-modal-body">
+                
+                <span class="cs-top-brand">GymHub</span>
+
+                <!-- Top Hero 2-Column Mockups Grid -->
+                <div class="cs-hero-grid">
+                    <div class="cs-hero-card mint-bg">
+                        <img src="images/gymhub_hero_showcase.png" alt="GymHub Admin Command Center Mockup">
+                    </div>
+                    <div class="cs-hero-card grey-bg">
+                        <img src="images/gymhub_mockup_1.jpg" alt="GymHub Mobile App Interface">
+                    </div>
+                </div>
+
+                <!-- Section: Challenges -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Challenges
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">A key challenge with GymHub was creating a fitness management platform that stayed real-time and operational while keeping the interface simple for front-desk staff and members.</h3>
+                        <p class="cs-subtext">We needed to eliminate paper-based logs and fragmented spreadsheets while providing immediate visibility into active memberships, trainer schedules, and monthly revenue. Balancing fast check-in queues with detailed member workout tracking required an uncluttered, high-contrast UI design.</p>
+                        <button class="cs-live-btn">App Design <span class="cs-btn-dot">●</span></button>
+                    </div>
+                </div>
+
+                <!-- Full Width Showcase Banner -->
+                <div class="cs-full-banner grey-banner">
+                    <img src="images/gymhub_banner_showcase.png" alt="GymHub Final Showcase Banner">
+                </div>
+
+                <!-- 2-Column Mobile App Mockups Showcase (Sign Up & Admin More System) -->
+                <div class="cs-hero-grid cs-mobile-showcase-grid" style="margin-top: 32px;">
+                    <div class="cs-hero-card mint-bg">
+                        <img src="images/gymhub_mockup_signup.jpg" alt="GymHub Sign Up Mobile UI">
+                    </div>
+                    <div class="cs-hero-card grey-bg">
+                        <img src="images/gymhub_mockup_more.jpg" alt="GymHub Admin Systems & POS Mobile UI">
+                    </div>
+                </div>
+
+                <!-- Section: Final Result -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Final result
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">To address these challenges, I focused on designing a high-contrast command center dashboard that streamlined daily gym operations and member management.</h3>
+                        <p class="cs-subtext">Working closely with gym owners and trainers, I designed a card-based architecture with color-coded status badges (Active IN / Expired OUT) and prominent one-click quick actions. This reduced manual check-in time by 75% and provided instant clarity on business health at a glance.</p>
+                    </div>
+                </div>
+
+                <!-- Section: Core Features -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Core features
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">Centralized Operations & Member Lifecycle Tracking</h3>
+                        <p class="cs-subtext">GymHub connects member profiles, payment ledgers, trainer assignments, and live attendance tracking into one real-time operational hub.</p>
+                        <div class="postr-features-grid" style="margin-top: 24px;">
+                            <div class="feature-item">
+                                <h4>Dashboard Command Center</h4>
+                                <p>Real-time visibility into Total Members, Active Plans, Monthly Revenue, and attendance charts.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Member Lifecycle Management</h4>
+                                <p>Full profile tracking, renewal tier alerts, and color-coded status indicators.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Trainer Coordination</h4>
+                                <p>Assign members to dedicated fitness coaches and manage session workloads effortlessly.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Fast Check-in System</h4>
+                                <p>Streamlined check-in/out logs to eliminate front-desk queues during peak gym hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Next Projects Footer Section -->
+                <div class="cs-next-projects">
+                    <div class="cs-next-header">
+                        <div class="cs-next-title-box">
+                            <h2 class="cs-next-title">Next projects.</h2>
+                            <p class="cs-next-subtitle">(2016-25©)</p>
+                        </div>
+                        <button class="cs-all-projects-btn">All projects <span class="cs-btn-dot">●</span></button>
+                    </div>
+
+                    <div class="cs-next-grid">
+                        <div class="cs-next-card">
+                            <div class="cs-next-card-header">
+                                <div class="cs-next-card-info">
+                                    <span class="cs-next-card-name">Simah.</span>
+                                    <span class="cs-next-card-meta">/ Saudi Real Estate SaaS • 2026</span>
+                                </div>
+                                <span class="cs-next-card-dots">•••</span>
+                            </div>
+                            <img src="images/simah_sheikh_cover.jpg" alt="Simah Project Showcase" class="cs-next-card-img">
+                        </div>
+
+                        <div class="cs-next-card">
+                            <div class="cs-next-card-header">
+                                <div class="cs-next-card-info">
+                                    <span class="cs-next-card-name">PDFr.</span>
+                                    <span class="cs-next-card-meta">/ Mobile PDF Utility • 2026</span>
+                                </div>
+                                <span class="cs-next-card-dots">•••</span>
+                            </div>
+                            <img src="images/pdfr_cover.png" alt="PDFr Project Showcase" class="cs-next-card-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Case Study Modal: Simah Real Estate -->
+    <div class="case-study-modal" id="simah-modal">
+        <div class="modal-backdrop" id="close-simah-modal-backdrop"></div>
+        <div class="modal-container">
+            <header class="modal-header">
+                <div class="modal-brand">
+                    <span class="modal-tag">Featured Saudi Arabia PropTech & Exhibition Case Study</span>
+                    <h2 class="modal-title">Simah</h2>
+                </div>
+                <button class="modal-close-btn hover-target" id="close-simah-modal-btn">✕ Close</button>
+            </header>
+            <div class="modal-progress-wrapper">
+                <div class="modal-progress-bar"></div>
+            </div>
+
+            <div class="modal-body cs-modal-body">
+                
+                <span class="cs-top-brand">Simah</span>
+
+                <!-- Top Hero 2-Column Mockups Grid -->
+                <div class="cs-hero-grid">
+                    <div class="cs-hero-card mint-bg">
+                        <img src="images/simah_mockup_getstarted.jpg" alt="Simah Find Your Perfect Property Mobile Onboarding UI">
+                    </div>
+                    <div class="cs-hero-card grey-bg">
+                        <img src="images/simah_mockup_about.jpg" alt="Simah Luxury Real Estate Mobile App UI">
+                    </div>
+                </div>
+
+                <!-- Section: Challenges -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Challenges
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">A key challenge with Simah was creating a luxury real estate discovery platform and exhibition interface for Saudi Arabia that felt immersive and high-end while keeping navigation effortless.</h3>
+                        <p class="cs-subtext">Traditional property browsing in Saudi Arabia felt static (images + text only), lacked emotional engagement, and failed to scale for large exhibition touchscreens and kiosk displays. We needed to bridge spatial 360° VR property walkthroughs with minimal cognitive friction, allowing buyers to feel the property, not just view it.</p>
+                        <button class="cs-live-btn">App Design <span class="cs-btn-dot">●</span></button>
+                    </div>
+                </div>
+
+                <!-- Full Width Showcase Banner -->
+                <div class="cs-full-banner grey-banner">
+                    <img src="images/simah_banner_showcase.png" alt="Simah 3D 16:9 Mobile App & Studio Showcase Banner">
+                </div>
+
+                <!-- 2-Column Mobile App Mockups Showcase (Luxury Villa Detail & About Simah System) -->
+                <div class="cs-hero-grid cs-mobile-showcase-grid" style="margin-top: 32px;">
+                    <div class="cs-hero-card mint-bg">
+                        <img src="images/simah_mockup_villa_detail.png" alt="Simah Luxury Villa Property Detail 3D Mobile UI">
+                    </div>
+                    <div class="cs-hero-card grey-bg">
+                        <img src="images/simah_mockup_about.jpg" alt="Simah Trusted Real Estate Partner Mobile UI">
+                    </div>
+                </div>
+
+                <!-- Section: Final Result -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Final result
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">To solve this, I designed an image-first mobile application and dedicated Exhibition Kiosk Mode UI tailored for high-value property buyers in Saudi Arabia.</h3>
+                        <p class="cs-subtext">The interface prioritizes ultra-high-resolution villa imagery, drag-to-explore 360° interior walkthroughs, and spatial filtering by budget, area, and amenities. Subtle Saudi cultural aesthetics—deep emerald green (#3B7665), royal gold (#BDA540), and regional motif accents (#4F008A)—elevate brand prestige and enable faster decision-making for buyers and exhibition visitors.</p>
+                    </div>
+                </div>
+
+                <!-- Section: Core Features -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Core features
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">360° Spatial Walkthroughs, Exhibition Mode & Dual Role Dashboards</h3>
+                        <p class="cs-subtext">Simah unifies mobile exploration, kiosk presentations, and agent inquiry management into one luxury design system.</p>
+                        <div class="postr-features-grid" style="margin-top: 24px;">
+                            <div class="feature-item">
+                                <h4>Interactive 360° & VR View</h4>
+                                <p>Drag-to-explore interior walkthroughs giving spatial awareness for luxury villas.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Exhibition Mode UI</h4>
+                                <p>Simplified zero-learning-curve UI designed for large touch screens, kiosks, and TVs.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Advanced Spatial Filtering</h4>
+                                <p>Filter by budget, villa size, amenities, and location with zero cognitive friction.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Role-Based Dashboards</h4>
+                                <p>Simplified discovery view for buyers and real-time inquiry management for agents.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Next Projects Footer Section -->
+                <div class="cs-next-projects">
+                    <div class="cs-next-header">
+                        <div class="cs-next-title-box">
+                            <h2 class="cs-next-title">Next projects.</h2>
+                            <p class="cs-next-subtitle">(2016-26©)</p>
+                        </div>
+                        <button class="cs-all-projects-btn">All projects <span class="cs-btn-dot">●</span></button>
+                    </div>
+
+                    <div class="cs-next-grid">
+                        <div class="cs-next-card">
+                            <div class="cs-next-card-header">
+                                <div class="cs-next-card-info">
+                                    <span class="cs-next-card-name">PDFr.</span>
+                                    <span class="cs-next-card-meta">/ Mobile PDF Utility • 2026</span>
+                                </div>
+                                <span class="cs-next-card-dots">•••</span>
+                            </div>
+                            <img src="images/pdfr_cover.png" alt="PDFr Project Showcase" class="cs-next-card-img">
+                        </div>
+
+                        <div class="cs-next-card">
+                            <div class="cs-next-card-header">
+                                <div class="cs-next-card-info">
+                                    <span class="cs-next-card-name">Nas Technicals.</span>
+                                    <span class="cs-next-card-meta">/ Corporate Engineering Web • 2026</span>
+                                </div>
+                                <span class="cs-next-card-dots">•••</span>
+                            </div>
+                            <img src="images/nas_cover.png" alt="Nas Technicals Project Showcase" class="cs-next-card-img">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Case Study Modal: PDFr Utility App -->
+    <div class="case-study-modal" id="pdfr-modal">
+        <div class="modal-backdrop" id="close-pdfr-modal-backdrop"></div>
+        <div class="modal-container">
+            <header class="modal-header">
+                <div class="modal-brand">
+                    <span class="modal-tag">Featured Mobile & Document Utility SaaS Case Study</span>
+                    <h2 class="modal-title">PDFr</h2>
+                </div>
+                <button class="modal-close-btn hover-target" id="close-pdfr-modal-btn">✕ Close</button>
+            </header>
+            <div class="modal-progress-wrapper">
+                <div class="modal-progress-bar"></div>
+            </div>
+
+            <div class="modal-body cs-modal-body">
+                
+                <span class="cs-top-brand">PDFr</span>
+
+                <!-- Top Hero 2-Column Mockups Grid -->
+                <div class="cs-hero-grid">
+                    <div class="cs-hero-card mint-bg">
+                        <img src="images/pdfr_cover.png" alt="PDFr Quick Task Actions Mobile UI">
+                    </div>
+                    <div class="cs-hero-card grey-bg">
+                        <img src="images/pdfr_mockup_reader.png" alt="PDFr Reader Document Upload UI">
+                    </div>
+                </div>
+
+                <!-- Section: Challenges -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Challenges
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">A key challenge with PDFr was eliminating the friction between enterprise-bloated PDF software and overly basic document viewers.</h3>
+                        <p class="cs-subtext">Most PDF tools fall into two extremes: overly complex enterprise software with steep learning curves, or basic viewers lacking editing capabilities. Users were forced to switch between multiple apps for simple tasks like page merging or camera scanning, leading to time loss and cognitive overload.</p>
+                        <button class="cs-live-btn">App Design <span class="cs-btn-dot">●</span></button>
+                    </div>
+                </div>
+
+                <!-- Full Width Showcase Banner -->
+                <div class="cs-full-banner grey-banner">
+                    <img src="images/pdfr_banner_showcase.png" alt="PDFr Task-Driven Productivity Studio Showcase Banner">
+                </div>
+
+                <!-- 2-Column Mobile App Mockups Showcase (Image to PDF & Split PDF Tools) -->
+                <div class="cs-hero-grid cs-mobile-showcase-grid" style="margin-top: 32px;">
+                    <div class="cs-hero-card mint-bg">
+                        <img src="images/pdfr_mockup_imagetopdf.jpg" alt="PDFr Image to PDF Conversion UI">
+                    </div>
+                    <div class="cs-hero-card grey-bg">
+                        <img src="images/pdfr_mockup_splitpdf.jpg" alt="PDFr Split PDF Range Extractor UI">
+                    </div>
+                </div>
+
+                <!-- Section: Final Result -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Final result
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">To solve this, I designed a task-driven "Open → Act → Done" interface that allows users to perform core PDF operations in seconds.</h3>
+                        <p class="cs-subtext">Instead of requiring users to open a file first, PDFr opens with direct task-based entries: Merge, Split, Edit, Scan, and Read. By stripping away unnecessary settings, implementing drag-and-drop page ordering, and optimizing touch targets for mobile, PDFr reduces document task latency by over 65%.</p>
+                    </div>
+                </div>
+
+                <!-- Section: Core Features -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Core features
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">Task-First Action Hub, Drag-and-Drop Merging & Camera Scanner</h3>
+                        <p class="cs-subtext">PDFr consolidates high-frequency PDF tasks into one lightweight, ultra-responsive utility app.</p>
+                        <div class="postr-features-grid" style="margin-top: 24px;">
+                            <div class="feature-item">
+                                <h4>Task-First Action Hub</h4>
+                                <p>Immediate one-tap access to Merge, Split, Edit, Scan, and Read from the home screen.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Drag-and-Drop PDF Merge</h4>
+                                <p>Select multiple documents and reorder pages effortlessly with zero friction.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Camera Scan to PDF</h4>
+                                <p>Instant edge detection and document scanning directly into multi-page PDF files.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Page Splitter & Annotator</h4>
+                                <p>Extract specific page ranges, highlight text, and add quick annotations on the go.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Next Projects Footer Section -->
+                <div class="cs-next-projects">
+                    <div class="cs-next-header">
+                        <div class="cs-next-title-box">
+                            <h2 class="cs-next-title">Next projects.</h2>
+                            <p class="cs-next-subtitle">(2016-26©)</p>
+                        </div>
+                        <button class="cs-all-projects-btn">All projects <span class="cs-btn-dot">●</span></button>
+                    </div>
+
+                    <div class="cs-next-grid">
+                        <div class="cs-next-card">
+                            <div class="cs-next-card-header">
+                                <div class="cs-next-card-info">
+                                    <span class="cs-next-card-name">Nas Technicals.</span>
+                                    <span class="cs-next-card-meta">/ Corporate Engineering Web • 2026</span>
+                                </div>
+                                <span class="cs-next-card-dots">•••</span>
+                            </div>
+                            <img src="images/nas_cover.png" alt="Nas Technicals Project Showcase" class="cs-next-card-img">
+                        </div>
+
+                        <div class="cs-next-card">
+                            <div class="cs-next-card-header">
+                                <div class="cs-next-card-info">
+                                    <span class="cs-next-card-name">Postr.</span>
+                                    <span class="cs-next-card-meta">/ AI Social Media SaaS • 2026</span>
+                                </div>
+                                <span class="cs-next-card-dots">•••</span>
+                            </div>
+                            <img src="images/postr_cover.png" alt="Postr Project Showcase" class="cs-next-card-img">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Case Study Modal: Nas Technicals UAE -->
+    <div class="case-study-modal" id="nas-modal">
+        <div class="modal-backdrop" id="close-nas-modal-backdrop"></div>
+        <div class="modal-container">
+            <header class="modal-header">
+                <div class="modal-brand">
+                    <span class="modal-tag">Featured Corporate Web & UAE Engineering Case Study</span>
+                    <h2 class="modal-title">Nas Technicals UAE</h2>
+                </div>
+                <button class="modal-close-btn hover-target" id="close-nas-modal-btn">✕ Close</button>
+            </header>
+            <div class="modal-progress-wrapper">
+                <div class="modal-progress-bar"></div>
+            </div>
+
+            <div class="modal-body cs-modal-body">
+                
+                <span class="cs-top-brand">Nas Technicals UAE</span>
+
+                <!-- Top Widescreen 16:9 Browser Window Hero Showcase -->
+                <div class="cs-browser-window">
+                    <div class="cs-browser-header">
+                        <div class="cs-browser-dots">
+                            <span class="cs-browser-dot red"></span>
+                            <span class="cs-browser-dot yellow"></span>
+                            <span class="cs-browser-dot green"></span>
+                        </div>
+                    </div>
+                    <div class="cs-16x9-card">
+                        <img src="images/nas_mockup_services.jpg" alt="Nas Technicals UAE Al Nazul Desktop UI Showcase">
+                    </div>
+                </div>
+
+                <!-- Section: Overview & Challenges -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Challenges
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">Overcoming text-heavy complexity to deliver instant clarity, credibility, and conversion for B2B engineering clients.</h3>
+                        <p class="cs-subtext">Technical service websites in the UAE often suffer from text-heavy clutter, lack of clear service categorization, weak trust signals, and poor lead conversion. Prospective corporate clients, contractors, and developers struggle to quickly answer: "What does this company actually do?" and "Why should I trust them?"</p>
+                        <button class="cs-live-btn">Web Design <span class="cs-btn-dot">●</span></button>
+                    </div>
+                </div>
+
+                <!-- 2-Column 16:9 Widescreen Browser Mockups Grid -->
+                <div class="cs-web-grid-2">
+                    <div class="cs-browser-window">
+                        <div class="cs-browser-header">
+                            <div class="cs-browser-dots">
+                                <span class="cs-browser-dot red"></span>
+                                <span class="cs-browser-dot yellow"></span>
+                                <span class="cs-browser-dot green"></span>
+                            </div>
+                        </div>
+                        <div class="cs-16x9-card">
+                            <img src="images/nas_mockup_services.jpg" alt="Nas Technicals Tailored Furnishing & 4 Core Solutions UI">
+                        </div>
+                    </div>
+
+                    <div class="cs-browser-window">
+                        <div class="cs-browser-header">
+                            <div class="cs-browser-dots">
+                                <span class="cs-browser-dot red"></span>
+                                <span class="cs-browser-dot yellow"></span>
+                                <span class="cs-browser-dot green"></span>
+                            </div>
+                        </div>
+                        <div class="cs-16x9-card">
+                            <img src="images/nas_mockup_works.jpg" alt="Nas Technicals All Works Portfolio Showcase UI">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Final Result -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Final result
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">A structured, conversion-focused corporate platform engineered around "Clarity Over Creativity" and zero-friction lead capture.</h3>
+                        <p class="cs-subtext">I architected a clean corporate design system with scan-friendly service cards (IT & Networking, Telecommunication, Security Systems, Audio & Video, Building Automation, Parking Management). Every section guides prospective enterprise clients seamlessly toward the primary conversion point: instant inquiry & quotation.</p>
+                    </div>
+                </div>
+
+                <!-- Section: Core Solutions -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Core services
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">Integrated Engineering, IT Infrastructure & Smart Automation Solutions</h3>
+                        <p class="cs-subtext">Communicating engineering authority across 6 core technical domains.</p>
+                        <div class="postr-features-grid" style="margin-top: 24px;">
+                            <div class="feature-item">
+                                <h4>IT & Enterprise Networking</h4>
+                                <p>End-to-end structured cabling, server room design, and secure corporate infrastructure.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Telecom & High-Speed WiFi</h4>
+                                <p>Enterprise wireless coverage, PABX systems, and unified telecommunication networks.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Security & Access Control</h4>
+                                <p>CCTV surveillance, biometric access control, and SIRA-compliant security solutions.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Building Automation & AV</h4>
+                                <p>Smart HVAC/lighting automation, commercial audio visual, and parking management systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Full Width Widescreen 16:9 Showcase Banner -->
+                <div class="cs-browser-window">
+                    <div class="cs-browser-header">
+                        <div class="cs-browser-dots">
+                            <span class="cs-browser-dot red"></span>
+                            <span class="cs-browser-dot yellow"></span>
+                            <span class="cs-browser-dot green"></span>
+                        </div>
+                    </div>
+                    <div class="cs-16x9-card">
+                        <img src="images/nas_banner_showcase.png" alt="Nas Technicals Full Suite Corporate Platform Showcase">
+                    </div>
+                </div>
+
+                <!-- Next Projects Footer Section -->
+                <div class="cs-next-projects">
+                    <div class="cs-next-header">
+                        <div class="cs-next-title-box">
+                            <h2 class="cs-next-title">Next projects.</h2>
+                            <p class="cs-next-subtitle">(2016-26©)</p>
+                        </div>
+                        <button class="cs-all-projects-btn">All projects <span class="cs-btn-dot">●</span></button>
+                    </div>
+
+                    <div class="cs-next-grid">
+                        <div class="cs-next-card">
+                            <div class="cs-next-card-header">
+                                <div class="cs-next-card-info">
+                                    <span class="cs-next-card-name">EzyRation.</span>
+                                    <span class="cs-next-card-meta">/ Accessible GovTech SaaS • 2026</span>
+                                </div>
+                                <span class="cs-next-card-dots">•••</span>
+                            </div>
+                            <img src="images/ezyration_cover.png" alt="EzyRation Project Showcase" class="cs-next-card-img">
+                        </div>
+
+                        <div class="cs-next-card">
+                            <div class="cs-next-card-header">
+                                <div class="cs-next-card-info">
+                                    <span class="cs-next-card-name">Postr.</span>
+                                    <span class="cs-next-card-meta">/ AI Social Media SaaS • 2026</span>
+                                </div>
+                                <span class="cs-next-card-dots">•••</span>
+                            </div>
+                            <img src="images/postr_cover.png" alt="Postr Project Showcase" class="cs-next-card-img">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Case Study Modal: EzyRation Accessible Ration App -->
+    <div class="case-study-modal" id="ezyration-modal">
+        <div class="modal-backdrop" id="close-ezyration-modal-backdrop"></div>
+        <div class="modal-container">
+            <header class="modal-header">
+                <div class="modal-brand">
+                    <span class="modal-tag">Featured Mobile & Social Impact Case Study</span>
+                    <h2 class="modal-title">EzyRation</h2>
+                </div>
+                <button class="modal-close-btn hover-target" id="close-ezyration-modal-btn">✕ Close</button>
+            </header>
+            <div class="modal-progress-wrapper">
+                <div class="modal-progress-bar"></div>
+            </div>
+
+            <div class="modal-body cs-modal-body">
+                
+                <span class="cs-top-brand">EzyRation</span>
+
+                <!-- Top Hero 2-Column Mockups Grid -->
+                <div class="cs-hero-grid">
+                    <div class="cs-hero-card mint-bg">
+                        <img src="images/ezyration_mockup_dashboard.png" alt="EzyRation Mobile App UI Dashboard Showcase">
+                    </div>
+                    <div class="cs-hero-card grey-bg">
+                        <img src="images/ezyration_mockup_tracker.png" alt="EzyRation Select Items & Ordering UI Showcase">
+                    </div>
+                </div>
+
+                <!-- Section: Overview & Challenges -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Challenges
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">Transforming complex, physical government ration queues into a zero-friction, accessibility-first mobile experience for elderly & remote families.</h3>
+                        <p class="cs-subtext">India's Public Distribution System (PDS) provides essential food rations to over 800 million citizens, but physical visits to ration shops present steep barriers for elderly citizens, individuals with disabilities, and migrant workers living away from family. Existing government tools focus strictly on raw information rather than user experience, creating cognitive overload and literacy hurdles.</p>
+                        <button class="cs-live-btn">App Design <span class="cs-btn-dot">●</span></button>
+                    </div>
+                </div>
+
+                <!-- Full Width Showcase Banner -->
+                <div class="cs-full-banner">
+                    <img src="images/ezyration_banner_showcase.png" alt="EzyRation Entitlement Tracker Showcase">
+                </div>
+
+                <!-- 2-Column Mobile App Mockups Showcase -->
+                <div class="cs-hero-grid cs-mobile-showcase-grid" style="margin-top: 32px;">
+                    <div class="cs-hero-card mint-bg">
+                        <img src="images/ezyration_mockup_kyc.jpg" alt="EzyRation Biometric Face Recognition KYC UI">
+                    </div>
+                    <div class="cs-hero-card grey-bg">
+                        <img src="images/ezyration_mockup_order.jpg" alt="EzyRation Order Confirmed & Live Track Delivery UI">
+                    </div>
+                </div>
+
+                <!-- Section: Final Result -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Final result
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">An empowering, transparent public service app centered around "Open → Track → Assist" with high-contrast accessibility.</h3>
+                        <p class="cs-subtext">I designed EzyRation around four core pillars: Accessibility-First UI (large touch targets, high contrast, clear Malayalam & English localization), Remote Family Assistance (allowing relatives working in other cities to check and manage monthly quotas for elderly parents), Transparent Monthly Entitlement Tracking, and Slot Booking for Doorstep Delivery.</p>
+                    </div>
+                </div>
+
+                <!-- Section: Core Solutions -->
+                <div class="cs-section-split">
+                    <div class="cs-label-badge">
+                        <span class="cs-plus-icon">+</span> Core features
+                    </div>
+                    <div>
+                        <h3 class="cs-heading">Accessible GovTech Solutions Built for Universal Adoption</h3>
+                        <p class="cs-subtext">Simplifying India's food security network for every citizen regardless of digital literacy.</p>
+                        <div class="postr-features-grid" style="margin-top: 24px;">
+                            <div class="feature-item">
+                                <h4>Ration Card Dashboard</h4>
+                                <p>Instant clarity on card type, registered family members, monthly entitlement quota, and usage history.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Monthly Quota Tracker</h4>
+                                <p>Visual progress bars showing allocated vs collected grains (rice, wheat, sugar) with collection alerts.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Remote Family Assist</h4>
+                                <p>Migrant family members can manage entitlement records remotely and schedule assistance for elderly relatives.</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>Multi-Language & High Contrast</h4>
+                                <p>Complete English & Malayalam localization with high-contrast typography and simplified navigation flows.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Next Projects Footer Section -->
+                <div class="cs-next-projects">
+                    <div class="cs-next-header">
+                        <div class="cs-next-title-box">
+                            <h2 class="cs-next-title">Next projects.</h2>
+                            <p class="cs-next-subtitle">(2016-26©)</p>
+                        </div>
+                        <button class="cs-all-projects-btn">All projects <span class="cs-btn-dot">●</span></button>
+                    </div>
+
+                    <div class="cs-next-grid">
+                        <div class="cs-next-card">
+                            <div class="cs-next-card-header">
+                                <div class="cs-next-card-info">
+                                    <span class="cs-next-card-name">Postr.</span>
+                                    <span class="cs-next-card-meta">/ AI Social Media SaaS • 2026</span>
+                                </div>
+                                <span class="cs-next-card-dots">•••</span>
+                            </div>
+                            <img src="images/postr_cover.png" alt="Postr Project Showcase" class="cs-next-card-img">
+                        </div>
+
+                        <div class="cs-next-card">
+                            <div class="cs-next-card-header">
+                                <div class="cs-next-card-info">
+                                    <span class="cs-next-card-name">GymHub.</span>
+                                    <span class="cs-next-card-meta">/ Mobile & Admin SaaS • 2026</span>
+                                </div>
+                                <span class="cs-next-card-dots">•••</span>
+                            </div>
+                            <img src="images/gymhub_cover_influencer.jpg" alt="GymHub Project Showcase" class="cs-next-card-img">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Zoom Lightbox Overlay with Interactive Controls -->
+    <div class="image-lightbox-modal" id="image-lightbox-modal">
+        <div class="lightbox-backdrop" id="close-lightbox-backdrop"></div>
+        
+        <!-- Floating Glassmorphic Zoom Controls Toolbar -->
+        <div class="lightbox-toolbar">
+            <span class="lightbox-zoom-level" id="lightbox-zoom-level">100%</span>
+            <button class="lightbox-btn hover-target" id="zoom-in-btn" title="Zoom In (+)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </button>
+            <button class="lightbox-btn hover-target" id="zoom-out-btn" title="Zoom Out (-)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </button>
+            <button class="lightbox-btn hover-target" id="zoom-reset-btn" title="Reset Zoom (100%)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+            </button>
+            <div class="lightbox-divider"></div>
+            <button class="lightbox-btn close-btn hover-target" id="close-lightbox-btn" title="Close Preview (ESC)">✕</button>
+        </div>
+
+        <div class="lightbox-content" id="lightbox-content-wrapper">
+            <img src="" alt="Zoomed View" class="lightbox-img" id="lightbox-img">
+        </div>
+        
+        <span class="lightbox-caption" id="lightbox-caption">Click image to zoom • Drag to pan • Use scroll wheel • Press ESC to exit</span>
+    </div>
 
 </body>
-
 </html>
